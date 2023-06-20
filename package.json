@@ -3,10 +3,6 @@
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "jest"
   },
-  "name": "@griseduardo/rjs-components",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/griseduardo"
-  },
   "version": "0.1.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
