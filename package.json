@@ -1,8 +1,5 @@
 {
-  "scripts": {
-    "build": "rollup -c --bundleConfigAsCjs",
-    "test": "jest"
-  },
+  "name": "rjs-components",
   "version": "0.1.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -11,6 +8,10 @@
     "dist"
   ],
   "license": "MIT",
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs",
+    "test": "jest"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
