@@ -6,7 +6,11 @@ const Button: React.FC<ButtonProps> = ({
   text,
   textColor,
   backgroundColor,
-  rounded,
+  hoverColor,
+  format,
+  borderRadius,
+  size,
+  padding,
   disabled,
   onClick
 }) => (
@@ -14,7 +18,11 @@ const Button: React.FC<ButtonProps> = ({
     text={text}
     textColor={textColor}
     backgroundColor={backgroundColor}
-    rounded={rounded}
+    hoverColor={hoverColor}
+    format={format}
+    borderRadius={borderRadius}
+    size={size}
+    padding={padding}
     disabled={disabled}
     onClick={onClick}
   >{text}</S.Button>
