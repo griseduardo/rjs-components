@@ -1,9 +1,10 @@
-## 0.1.1
+## 0.2.0
 
-_Jun. 21, 2023_
+_Jun. 26, 2023_
 
-- add storybook
 - add Button component
+- add storybook
+- add prettier
 
 ## 0.1.0
 

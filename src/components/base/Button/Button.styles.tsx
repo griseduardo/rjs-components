@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 import { ButtonProps } from "./Button.types";
 
 export const Button = styled.button<ButtonProps>`
@@ -14,7 +14,7 @@ export const Button = styled.button<ButtonProps>`
       : "7px"};
   color: ${(props) => props.textColor || `#000`};
   background-color: ${(props) => props.backgroundColor || `#d3d3d3`};
-  pointer-events: ${(props) => props.disabled ? `none` : `auto`};
+  pointer-events: ${(props) => (props.disabled ? `none` : `auto`)};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   border-radius: ${(props) =>
     props.borderRadius
@@ -25,6 +25,6 @@ export const Button = styled.button<ButtonProps>`
       ? "5px"
       : "0px"};
   &:hover {
-    background-color: ${(props) => (props.hoverColor || "#a9a9a9")};
+    background-color: ${(props) => props.hoverColor || "#a9a9a9"};
   }
-`
+`;

@@ -12,7 +12,8 @@
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "format": "prettier --write \"**/src/components/**/**/*.[jt]s?(x)\""
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -40,6 +41,7 @@
     "@storybook/react": "^7.0.22",
     "@storybook/react-webpack5": "^7.0.22",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

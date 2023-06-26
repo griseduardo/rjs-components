@@ -37,7 +37,7 @@ CustomColor.args = {
   text: "Button",
   backgroundColor: "#EE4B2B",
   textColor: "#fff",
-  hoverColor: "#D22B2B"
+  hoverColor: "#D22B2B",
 };
 
 export const PredefinedFormats: Story = (args) => (
@@ -53,7 +53,7 @@ export const PredefinedFormats: Story = (args) => (
 
 PredefinedFormats.args = {
   text: "Button",
-  format: "default"
+  format: "default",
 };
 
 export const CustomFormats: Story = (args) => (
@@ -67,7 +67,7 @@ export const CustomFormats: Story = (args) => (
 
 CustomFormats.args = {
   text: "Button",
-  borderRadius: "2px"
+  borderRadius: "2px",
 };
 
 export const PredefinedSizes: Story = (args) => (
@@ -83,13 +83,13 @@ export const PredefinedSizes: Story = (args) => (
 
 PredefinedSizes.args = {
   text: "Button",
-  size: "small"
+  size: "small",
 };
 
 export const CustomSizes: Story = (args) => (
   <>
     <p>padding: 10px</p>
-    <Button {...args}/>
+    <Button {...args} />
     <p>padding: 20px 10px</p>
     <Button {...args} padding={"20px 10px"} />
   </>
@@ -97,5 +97,5 @@ export const CustomSizes: Story = (args) => (
 
 CustomSizes.args = {
   text: "Button",
-  padding: "10px"
+  padding: "10px",
 };

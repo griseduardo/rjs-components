@@ -1,6 +1,6 @@
-import * as React from "react"
+import * as React from "react";
 import { ButtonProps } from "./Button.types";
-import * as S from './Button.styles'
+import * as S from "./Button.styles";
 
 const Button: React.FC<ButtonProps> = ({
   text,
@@ -12,7 +12,7 @@ const Button: React.FC<ButtonProps> = ({
   size,
   padding,
   disabled,
-  onClick
+  onClick,
 }) => (
   <S.Button
     text={text}
@@ -25,7 +25,9 @@ const Button: React.FC<ButtonProps> = ({
     padding={padding}
     disabled={disabled}
     onClick={onClick}
-  >{text}</S.Button>
-)
+  >
+    {text}
+  </S.Button>
+);
 
 export default Button;
