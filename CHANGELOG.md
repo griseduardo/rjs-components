@@ -1,3 +1,9 @@
+## 0.2.2
+
+_Jun. 26, 2023_
+
+- add react and react-dom to peer dependencies
+
 ## 0.2.1
 
 _Jun. 26, 2023_
