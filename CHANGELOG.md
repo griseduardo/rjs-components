@@ -1,8 +1,14 @@
+## 0.2.1
+
+_Jun. 26, 2023_
+
+- adjust export for Button base component
+
 ## 0.2.0
 
 _Jun. 26, 2023_
 
-- add Button component
+- add Button base component
 - add storybook
 - add prettier
 
