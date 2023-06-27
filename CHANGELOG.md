@@ -1,3 +1,10 @@
+## 0.2.4
+
+_Jun. 27, 2023_
+
+- add github repository on package
+- remove skipLibCheck on tsconfig
+
 ## 0.2.3
 
 _Jun. 27, 2023_

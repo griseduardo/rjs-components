@@ -1,6 +1,6 @@
 {
   "name": "rjs-components",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -9,6 +9,10 @@
     "docs"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/griseduardo/rjs-components.git"
+  },
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "jest",
