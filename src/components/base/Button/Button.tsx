@@ -2,7 +2,7 @@ import * as React from "react";
 import { ButtonProps } from "./Button.types";
 import * as S from "./Button.styles";
 
-const Button: React.FC<ButtonProps> = ({
+const Button = ({
   text,
   textColor,
   backgroundColor,
@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({
   padding,
   disabled,
   onClick,
-}) => (
+}: ButtonProps) => (
   <S.Button
     text={text}
     textColor={textColor}

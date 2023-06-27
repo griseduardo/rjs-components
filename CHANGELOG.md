@@ -1,3 +1,10 @@
+## 0.2.3
+
+_Jun. 27, 2023_
+
+- add docs files on package
+- adjust Button base component types
+
 ## 0.2.2
 
 _Jun. 26, 2023_
