@@ -1,3 +1,9 @@
+## 0.2.5
+
+_Jun. 30, 2023_
+
+- use same file for styles, types and component
+
 ## 0.2.4
 
 _Jun. 27, 2023_
