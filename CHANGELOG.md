@@ -1,3 +1,9 @@
+## 0.2.7
+
+_Jun. 30, 2023_
+
+- update README with general lib informations
+
 ## 0.2.6
 
 _Jun. 30, 2023_

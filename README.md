@@ -2,8 +2,26 @@
 
 The RJS components is a lib that provides reusable React components, divided in base components and composed components (that are a composition of base components).
 
+## Installation
+
+```sh
+yarn add rjs-components
+```
+
+```sh
+npm install rjs-components
+```
+
 ## Base components
 
 | Component | Docs                          |
 | ----------| ------------------------------|
 | Button    | [Button](docs/base/button.md) |
+
+## Import components
+
+Example base component:
+
+```sh
+import { Button } from 'rjs-components'
+```
