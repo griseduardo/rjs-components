@@ -1,3 +1,9 @@
+## 0.2.6
+
+_Jun. 30, 2023_
+
+- change interface to type on Button props
+
 ## 0.2.5
 
 _Jun. 30, 2023_

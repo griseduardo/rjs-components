@@ -2,7 +2,7 @@ import * as React from "react";
 import { MouseEventHandler } from "react";
 import styled from "styled-components";
 
-export interface ButtonProps {
+export type ButtonProps = {
   text: string;
   textColor?: string;
   backgroundColor?: string;
