@@ -12,11 +12,9 @@ yarn add rjs-components
 npm install rjs-components
 ```
 
-## Base components
+## Storybook
 
-| Component | Docs                          |
-| ----------| ------------------------------|
-| Button    | [Button](docs/base/button.md) |
+The lib components are presented in [storybook](https://649f75c489527d98e48de36a-bejnacygth.chromatic.com).
 
 ## Import components
 
@@ -25,3 +23,9 @@ Example base component:
 ```sh
 import { Button } from 'rjs-components'
 ```
+
+## Base components
+
+| Component | Docs                          |
+| ----------| ------------------------------|
+| Button    | [Button](docs/base/button.md) |

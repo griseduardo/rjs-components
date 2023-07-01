@@ -1,6 +1,6 @@
 {
   "name": "rjs-components",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -46,6 +46,7 @@
     "@storybook/react": "^7.0.22",
     "@storybook/react-webpack5": "^7.0.22",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "chromatic": "^6.19.9",
     "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

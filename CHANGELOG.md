@@ -1,3 +1,10 @@
+## 0.2.8
+
+_Jun. 30, 2023_
+
+- add chromatic
+- deploy storybook
+
 ## 0.2.7
 
 _Jun. 30, 2023_
