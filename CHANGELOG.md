@@ -1,3 +1,9 @@
+## 0.2.9
+
+_Jun. 30, 2023_
+
+- update rollup and tsconfig
+
 ## 0.2.8
 
 _Jun. 30, 2023_
