@@ -1,3 +1,9 @@
+## 0.3.0
+
+_Jul. 03, 2023_
+
+- add Tag base component
+
 ## 0.2.9
 
 _Jun. 30, 2023_

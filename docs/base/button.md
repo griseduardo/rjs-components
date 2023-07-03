@@ -24,6 +24,7 @@ SizeType = "small" | "medium" | "large"
 OnClickType = MouseEventHandler< HTMLButtonElement >
 
 ---------------------------------------------------------------------
+
 The format props provides predefined formats for button, but is possible customize with borderRadius props.
 
 The size props provides predefined sizes for button, but is possible customize with padding props.

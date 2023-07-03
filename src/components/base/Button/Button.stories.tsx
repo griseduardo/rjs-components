@@ -26,7 +26,7 @@ Default.args = {
 
 export const CustomColor: Story = (args) => (
   <>
-    <p>Active</p>
+    <p>Active - textColor and backgroundColor</p>
     <Button {...args} />
     <p>Disabled</p>
     <Button {...args} disabled={true} />
@@ -35,9 +35,9 @@ export const CustomColor: Story = (args) => (
 
 CustomColor.args = {
   text: "Button",
-  backgroundColor: "#EE4B2B",
+  backgroundColor: "#ee4b2b",
   textColor: "#fff",
-  hoverColor: "#D22B2B",
+  hoverColor: "#d22b2b",
 };
 
 export const PredefinedFormats: Story = (args) => (
@@ -58,9 +58,9 @@ PredefinedFormats.args = {
 
 export const CustomFormats: Story = (args) => (
   <>
-    <p>border-radius: 2px</p>
+    <p>borderRadius: 2px</p>
     <Button {...args} />
-    <p>border-radius: 15px 2px</p>
+    <p>borderRadius: 15px 2px</p>
     <Button {...args} borderRadius={"15px 2px"} />
   </>
 );
