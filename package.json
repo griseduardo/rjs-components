@@ -1,6 +1,6 @@
 {
   "name": "rjs-components",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -18,7 +18,14 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "format": "prettier --write \"**/src/components/**/**/*.[jt]s?(x)\""
+    "format": "prettier --write \"**/src/components/**/**/*.[jt]s?(x)\"",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "\"**/src/components/**/**/*.[jt]s?(x)\"": [
+      "yarn lint --fix",
+      "yarn test --findRelatedTests --bail"
+    ]
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -47,6 +54,8 @@
     "@storybook/testing-library": "^0.0.14-next.2",
     "@types/react": "^18.2.14",
     "chromatic": "^6.19.9",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
