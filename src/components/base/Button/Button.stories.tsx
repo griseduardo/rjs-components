@@ -11,91 +11,99 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Default: Story = (args) => (
+export const PredefinedFormat: Story = (args) => (
   <>
-    <p>Active</p>
+    <p>Default:</p>
     <Button {...args} />
-    <p>Disabled</p>
-    <Button {...args} disabled={true} />
-  </>
-);
-
-Default.args = {
-  text: "Button",
-};
-
-export const CustomColor: Story = (args) => (
-  <>
-    <p>Active - textColor and backgroundColor</p>
-    <Button {...args} />
-    <p>Disabled</p>
-    <Button {...args} disabled={true} />
-  </>
-);
-
-CustomColor.args = {
-  text: "Button",
-  backgroundColor: "#ee4b2b",
-  textColor: "#fff",
-  hoverColor: "#d22b2b",
-};
-
-export const PredefinedFormats: Story = (args) => (
-  <>
-    <p>Default</p>
-    <Button {...args} />
-    <p>Semi rounded</p>
+    <p>Semi rounded:</p>
     <Button {...args} format={"semiRounded"} />
-    <p>Rounded</p>
+    <p>Rounded:</p>
     <Button {...args} format={"rounded"} />
   </>
 );
 
-PredefinedFormats.args = {
+PredefinedFormat.args = {
   text: "Button",
   format: "default",
 };
 
-export const CustomFormats: Story = (args) => (
+export const CustomFormat: Story = (args) => (
   <>
-    <p>borderRadius: 2px</p>
+    <p>Default:</p>
     <Button {...args} />
+    <p>borderRadius: 2px</p>
+    <Button {...args} borderRadius={"2px"} />
     <p>borderRadius: 15px 2px</p>
     <Button {...args} borderRadius={"15px 2px"} />
   </>
 );
 
-CustomFormats.args = {
+CustomFormat.args = {
   text: "Button",
-  borderRadius: "2px",
+  borderRadius: "0px",
 };
 
-export const PredefinedSizes: Story = (args) => (
+export const CustomColor: Story = (args) => (
   <>
-    <p>Small</p>
+    <p>Default:</p>
+    <p>Active</p>
     <Button {...args} />
-    <p>Medium</p>
+    <p>Disabled</p>
+    <Button {...args} disabled={true} />
+    <p>textColor: #fff / backgroundColor: #ee4b2b/ hoverColor: #d22b2b</p>
+    <p>Active</p>
+    <Button
+      {...args}
+      textColor={"#fff"}
+      backgroundColor={"#ee4b2b"}
+      hoverColor={"#d22b2b"}
+    />
+    <p>Disabled</p>
+    <Button
+      {...args}
+      disabled={true}
+      textColor={"#fff"}
+      backgroundColor={"#ee4b2b"}
+      hoverColor={"#d22b2b"}
+    />
+  </>
+);
+
+CustomColor.args = {
+  text: "Button",
+  backgroundColor: "#d3d3d3",
+  textColor: "#000",
+  hoverColor: "#a9a9a9",
+};
+
+export const PredefinedSize: Story = (args) => (
+  <>
+    <p>Default:</p>
+    <Button {...args} />
+    <p>Medium:</p>
     <Button {...args} size={"medium"} />
-    <p>Large</p>
+    <p>Large:</p>
     <Button {...args} size={"large"} />
   </>
 );
 
-PredefinedSizes.args = {
+PredefinedSize.args = {
   text: "Button",
   size: "small",
 };
 
-export const CustomSizes: Story = (args) => (
+export const CustomSize: Story = (args) => (
   <>
-    <p>padding: 10px</p>
+    <p>Default:</p>
     <Button {...args} />
+    <p>padding: 10px</p>
+    <Button {...args} padding={"10px"} />
     <p>padding: 20px 10px</p>
     <Button {...args} padding={"20px 10px"} />
   </>
 );
 
-CustomSizes.args = {
+CustomSize.args = {
   text: "Button",
-  padding: "10px",
+  padding: "7px",
 };

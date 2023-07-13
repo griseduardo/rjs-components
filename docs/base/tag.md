@@ -2,18 +2,18 @@
 
 ## Props
 
-| props           | Type        | Description             | Required |
-|-----------------|-------------|-------------------------|----------|
-| text            | String      | tag text                | true     |
-| type            | TagType     | tag type                | false    |
-| textColor       | String      | tag text color          | false    |
-| backgroundColor | String      | tag background color    | false    |
-| format          | FormatType  | tag format              | false    |
-| borderRadius    | String      | tag border radius       | false    |
-| size            | SizeType    | tag size                | false    |
-| padding         | String      | tag padding             | false    |
+| props           | Type       | Description                 |
+|-----------------|------------|-----------------------------|
+| text            | String     | tag text                    |
+| type            | TagType    | tag type                    |
+| textColor       | String     | tag custom text color       |
+| backgroundColor | String     | tag custom background color |
+| format          | FormatType | tag predefined format       |
+| borderRadius    | String     | tag custom border radius    |
+| size            | SizeType   | tag predefined size         |
+| padding         | String     | tag custom padding          |
 
----------------------------------------------------------------------
+--------------------------------------------------------------
 
 TagType = "default" | "success" | "alert" | "error"
 
@@ -21,7 +21,7 @@ FormatType = "default" | "semiRounded" | "rounded"
 
 SizeType = "small" | "medium" | "large"
 
----------------------------------------------------------------------
+--------------------------------------------------------------
 
 The type props provides predefined text color and background color for tag, but is possible customize with textColor and backgroundColor props.
 

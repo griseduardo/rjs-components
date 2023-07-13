@@ -1,3 +1,11 @@
+## 0.4.0
+
+_Jul. 13, 2023_
+
+- add Text base component
+- include Text base component inside Tag and Button base components
+- fix Tag and Button base component tests
+
 ## 0.3.2
 
 _Jul. 06, 2023_

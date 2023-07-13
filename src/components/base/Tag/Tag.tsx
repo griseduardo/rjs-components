@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Text from "../Text/Text";
 
 export interface TagProps {
   text: string;
@@ -22,7 +23,6 @@ export const StyledTag = styled.div<TagProps>`
       : props.size === "medium"
       ? "10px 12px"
       : "7px"};
-  color: ${(props) => (props.textColor ? props.textColor : "#fff")};
   background-color: ${(props) =>
     props.backgroundColor
       ? props.backgroundColor
@@ -56,16 +56,16 @@ const Tag = ({
   padding,
 }: TagProps) => (
   <StyledTag
+    data-testid="tag"
     text={text}
     type={type}
-    textColor={textColor}
     backgroundColor={backgroundColor}
     format={format}
     borderRadius={borderRadius}
     size={size}
     padding={padding}
   >
-    {text}
+    <Text color={textColor || "#fff"}>{text}</Text>
   </StyledTag>
 );
 

@@ -1,5 +1,6 @@
 import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
+import Text from "../Text/Text";
 
 export interface ButtonProps {
   text: string;
@@ -25,7 +26,6 @@ export const StyledButton = styled.button<ButtonProps>`
       : props.size === "medium"
       ? "10px 12px"
       : "7px"};
-  color: ${(props) => props.textColor || `#000`};
   background-color: ${(props) => props.backgroundColor || `#d3d3d3`};
   pointer-events: ${(props) => (props.disabled ? `none` : `auto`)};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
@@ -56,7 +56,6 @@ const Button = ({
 }: ButtonProps) => (
   <StyledButton
     text={text}
-    textColor={textColor}
     backgroundColor={backgroundColor}
     hoverColor={hoverColor}
     format={format}
@@ -66,7 +65,7 @@ const Button = ({
     disabled={disabled}
     onClick={onClick}
   >
-    {text}
+    <Text color={textColor}>{text}</Text>
   </StyledButton>
 );
 

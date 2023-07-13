@@ -1,6 +1,10 @@
 # RJS components (in development)
 
-The RJS components is a lib that provides reusable React components, divided in base components and composed components (that are a composition of base components).
+The RJS components is a lib that provides reusable React components, divided in:
+
+- Base components: general base components (in development)
+- Structure components: components that will englobe base components to create rjs components (future development)
+- Rjs components: more complex components created by composition of base components (future development)
 
 ## Installation
 
@@ -14,7 +18,7 @@ npm install rjs-components
 
 ## Storybook
 
-The lib components are presented in [storybook](https://649f75c489527d98e48de36a-yxuwgnfele.chromatic.com).
+The lib components are presented in [storybook](https://649f75c489527d98e48de36a-jbbzkjcxel.chromatic.com).
 
 ## Import components
 
@@ -30,3 +34,4 @@ import { Button } from "rjs-components"
 |-----------|-------------------------------|
 | Button    | [Button](docs/base/button.md) |
 | Tag       | [Tag](docs/base/tag.md)       |
+| Text      | [Text](docs/base/text.md)     |

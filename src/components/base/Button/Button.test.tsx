@@ -1,7 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import "jest-styled-components";
-import { act, render, screen } from "@testing-library/react";
+import { act, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import Button from "./Button";
@@ -13,17 +13,22 @@ describe("<Button />", () => {
     const element = screen.getByRole("button", { name: "Button" });
 
     expect(element).toBeInTheDocument;
-    expect(element).toHaveStyleRule("color", "#000");
     expect(element).toHaveStyleRule("background-color", "#d3d3d3");
     expect(element).toHaveStyleRule("border-radius", "0px");
     expect(element).toHaveStyleRule("padding", "7px");
     expect(element).not.toBeDisabled;
+    expect(within(element).getByText("Button")).toHaveStyleRule(
+      "color",
+      "#000"
+    );
   });
 
   it("should render component with custom text color", () => {
     render(<Button text="Button" textColor="#fff" />);
 
-    expect(screen.getByRole("button", { name: "Button" })).toHaveStyleRule(
+    const element = screen.getByRole("button", { name: "Button" });
+
+    expect(within(element).getByText("Button")).toHaveStyleRule(
       "color",
       "#fff"
     );

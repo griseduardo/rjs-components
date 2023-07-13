@@ -11,94 +11,100 @@ export default meta;
 
 type Story = StoryObj<typeof Tag>;
 
-export const Types: Story = (args) => (
+export const PredefinedType: Story = (args) => (
   <>
-    <p>Default</p>
+    <p>Default:</p>
     <Tag {...args} />
-    <p>Success</p>
+    <p>Success:</p>
     <Tag {...args} text={"Success"} type={"success"} />
-    <p>Alert</p>
+    <p>Alert:</p>
     <Tag {...args} text={"Alert"} type={"alert"} />
-    <p>Error</p>
+    <p>Error:</p>
     <Tag {...args} text={"Error"} type={"error"} />
   </>
 );
 
-Types.args = {
+PredefinedType.args = {
   text: "Default",
 };
 
 export const CustomColor: Story = (args) => (
   <>
-    <p>Blue - textColor and backgroundColor</p>
+    <p>Default:</p>
     <Tag {...args} />
-    <p>Purple</p>
+    <p>textColor: #0047ab / backgroundColor: #89cff0</p>
+    <Tag {...args} textColor={"#0047ab"} backgroundColor={"#89cff0"} />
+    <p>textColor: #800080 / backgroundColor: #e6e6fa</p>
     <Tag {...args} textColor={"#800080"} backgroundColor={"#e6e6fa"} />
   </>
 );
 
 CustomColor.args = {
   text: "Tag",
-  backgroundColor: "#89cff0",
-  textColor: "#0047ab",
+  backgroundColor: "#d3d3d3",
+  textColor: "#fff",
 };
 
-export const PredefinedFormats: Story = (args) => (
+export const PredefinedFormat: Story = (args) => (
   <>
-    <p>Default</p>
+    <p>Default:</p>
     <Tag {...args} />
-    <p>Semi rounded</p>
+    <p>Semi rounded:</p>
     <Tag {...args} format={"semiRounded"} />
-    <p>Rounded</p>
+    <p>Rounded:</p>
     <Tag {...args} format={"rounded"} />
   </>
 );
 
-PredefinedFormats.args = {
+PredefinedFormat.args = {
   text: "Tag",
   format: "default",
 };
 
-export const CustomFormats: Story = (args) => (
+export const CustomFormat: Story = (args) => (
   <>
-    <p>borderRadius: 2px</p>
+    <p>Default:</p>
     <Tag {...args} />
+    <p>borderRadius: 2px</p>
+    <Tag {...args} borderRadius={"2px"} />
     <p>borderRadius: 15px 2px</p>
     <Tag {...args} borderRadius={"15px 2px"} />
   </>
 );
 
-CustomFormats.args = {
+CustomFormat.args = {
   text: "Tag",
-  borderRadius: "2px",
+  borderRadius: "0px",
 };
 
-export const PredefinedSizes: Story = (args) => (
+export const PredefinedSize: Story = (args) => (
   <>
-    <p>Small</p>
+    <p>Default:</p>
     <Tag {...args} />
-    <p>Medium</p>
+    <p>Medium:</p>
     <Tag {...args} size={"medium"} />
-    <p>Large</p>
+    <p>Large:</p>
     <Tag {...args} size={"large"} />
   </>
 );
 
-PredefinedSizes.args = {
+PredefinedSize.args = {
   text: "Tag",
   size: "small",
 };
 
-export const CustomSizes: Story = (args) => (
+export const CustomSize: Story = (args) => (
   <>
-    <p>padding: 10px</p>
+    <p>Default:</p>
     <Tag {...args} />
+    <p>padding: 10px</p>
+    <Tag {...args} padding={"10px"} />
     <p>padding: 20px 10px</p>
     <Tag {...args} padding={"20px 10px"} />
   </>
 );
 
-CustomSizes.args = {
+CustomSize.args = {
   text: "Tag",
-  padding: "10px",
+  padding: "7px",
 };
