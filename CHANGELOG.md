@@ -1,3 +1,9 @@
+## 0.4.1
+
+_Jul. 13, 2023_
+
+- export Text base component
+
 ## 0.4.0
 
 _Jul. 13, 2023_
