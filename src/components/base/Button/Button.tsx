@@ -5,6 +5,10 @@ import Text from "../Text/Text";
 export interface ButtonProps {
   text: string;
   textColor?: string;
+  textWeight?: "normal" | "bold";
+  textFontWeight?: number;
+  textFontSize?: string;
+  textFontFamily?: string;
   backgroundColor?: string;
   hoverColor?: string;
   format?: "default" | "semiRounded" | "rounded";
@@ -45,6 +49,10 @@ export const StyledButton = styled.button<ButtonProps>`
 const Button = ({
   text,
   textColor,
+  textWeight,
+  textFontWeight,
+  textFontSize,
+  textFontFamily,
   backgroundColor,
   hoverColor,
   format,
@@ -53,20 +61,30 @@ const Button = ({
   padding,
   disabled,
   onClick,
-}: ButtonProps) => (
-  <StyledButton
-    text={text}
-    backgroundColor={backgroundColor}
-    hoverColor={hoverColor}
-    format={format}
-    borderRadius={borderRadius}
-    size={size}
-    padding={padding}
-    disabled={disabled}
-    onClick={onClick}
-  >
-    <Text color={textColor}>{text}</Text>
-  </StyledButton>
-);
+}: ButtonProps) => {
+  return (
+    <StyledButton
+      text={text}
+      backgroundColor={backgroundColor}
+      hoverColor={hoverColor}
+      format={format}
+      borderRadius={borderRadius}
+      size={size}
+      padding={padding}
+      disabled={disabled}
+      onClick={onClick}
+    >
+      <Text
+        color={textColor}
+        weight={textWeight}
+        fontWeight={textFontWeight}
+        fontSize={textFontSize}
+        fontFamily={textFontFamily}
+      >
+        {text}
+      </Text>
+    </StyledButton>
+  );
+};
 
 export default Button;

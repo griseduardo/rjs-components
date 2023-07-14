@@ -1,3 +1,9 @@
+## 0.4.2
+
+_Jul. 14, 2023_
+
+- add text props to Button base component
+
 ## 0.4.1
 
 _Jul. 13, 2023_

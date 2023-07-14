@@ -23,17 +23,6 @@ describe("<Button />", () => {
     );
   });
 
-  it("should render component with custom text color", () => {
-    render(<Button text="Button" textColor="#fff" />);
-
-    const element = screen.getByRole("button", { name: "Button" });
-
-    expect(within(element).getByText("Button")).toHaveStyleRule(
-      "color",
-      "#fff"
-    );
-  });
-
   it("should render component with custom background color", () => {
     render(<Button text="Button" backgroundColor="#fff" />);
 
@@ -120,5 +109,60 @@ describe("<Button />", () => {
 
     expect(screen.getByRole("button", { name: "Button" })).toBeDisabled;
     expect(onClick).toHaveBeenCalledTimes(0);
+  });
+
+  it("should render component with custom text color", () => {
+    render(<Button text="Button" textColor="#fff" />);
+
+    const element = screen.getByRole("button", { name: "Button" });
+
+    expect(within(element).getByText("Button")).toHaveStyleRule(
+      "color",
+      "#fff"
+    );
+  });
+
+  it("should render component with bold text font weight", () => {
+    render(<Button text="Button" textWeight="bold" />);
+
+    const element = screen.getByRole("button", { name: "Button" });
+
+    expect(within(element).getByText("Button")).toHaveStyleRule(
+      "font-weight",
+      "bold"
+    );
+  });
+
+  it("should render component with custom text font weight", () => {
+    render(<Button text="Button" textFontWeight={200} />);
+
+    const element = screen.getByRole("button", { name: "Button" });
+
+    expect(within(element).getByText("Button")).toHaveStyleRule(
+      "font-weight",
+      "200"
+    );
+  });
+
+  it("should render component with custom text font size", () => {
+    render(<Button text="Button" textFontSize="30px" />);
+
+    const element = screen.getByRole("button", { name: "Button" });
+
+    expect(within(element).getByText("Button")).toHaveStyleRule(
+      "font-size",
+      "30px"
+    );
+  });
+
+  it("should render component with custom text font family", () => {
+    render(<Button text="Button" textFontFamily="Times New Roman" />);
+
+    const element = screen.getByRole("button", { name: "Button" });
+
+    expect(within(element).getByText("Button")).toHaveStyleRule(
+      "font-family",
+      "Times New Roman"
+    );
   });
 });
