@@ -1,3 +1,9 @@
+## 0.4.3
+
+_Jul. 17, 2023_
+
+- add text props to Tag base component
+
 ## 0.4.2
 
 _Jul. 14, 2023_

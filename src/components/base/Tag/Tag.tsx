@@ -6,6 +6,10 @@ export interface TagProps {
   text: string;
   type?: "default" | "success" | "alert" | "error";
   textColor?: string;
+  textWeight?: "normal" | "bold";
+  textFontWeight?: number;
+  textFontSize?: string;
+  textFontFamily?: string;
   backgroundColor?: string;
   format?: "default" | "semiRounded" | "rounded";
   borderRadius?: string;
@@ -49,6 +53,10 @@ const Tag = ({
   text,
   type,
   textColor,
+  textWeight,
+  textFontWeight,
+  textFontSize,
+  textFontFamily,
   backgroundColor,
   format,
   borderRadius,
@@ -65,7 +73,15 @@ const Tag = ({
     size={size}
     padding={padding}
   >
-    <Text color={textColor || "#fff"}>{text}</Text>
+    <Text
+      color={textColor || "#fff"}
+      weight={textWeight}
+      fontWeight={textFontWeight}
+      fontSize={textFontSize}
+      fontFamily={textFontFamily}
+    >
+      {text}
+    </Text>
   </StyledTag>
 );
 

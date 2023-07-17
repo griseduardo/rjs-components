@@ -45,14 +45,6 @@ describe("<Tag />", () => {
     expect(within(element).getByText("Tag")).toHaveStyleRule("color", "#fff");
   });
 
-  it("should render component with custom text color", () => {
-    render(<Tag text="Tag" textColor="#000" />);
-
-    const element = screen.getByTestId("tag");
-
-    expect(within(element).getByText("Tag")).toHaveStyleRule("color", "#000");
-  });
-
   it("should render component with custom background color", () => {
     render(<Tag text="Tag" backgroundColor="#fff" />);
 
@@ -96,5 +88,57 @@ describe("<Tag />", () => {
     render(<Tag text="Tag" padding="20px 10px" />);
 
     expect(screen.getByTestId("tag")).toHaveStyleRule("padding", "20px 10px");
+  });
+
+  it("should render component with custom text color", () => {
+    render(<Tag text="Tag" textColor="#000" />);
+
+    const element = screen.getByTestId("tag");
+
+    expect(within(element).getByText("Tag")).toHaveStyleRule("color", "#000");
+  });
+
+  it("should render component with bold text font weight", () => {
+    render(<Tag text="Tag" textWeight="bold" />);
+
+    const element = screen.getByTestId("tag");
+
+    expect(within(element).getByText("Tag")).toHaveStyleRule(
+      "font-weight",
+      "bold"
+    );
+  });
+
+  it("should render component with custom text font weight", () => {
+    render(<Tag text="Tag" textFontWeight={200} />);
+
+    const element = screen.getByTestId("tag");
+
+    expect(within(element).getByText("Tag")).toHaveStyleRule(
+      "font-weight",
+      "200"
+    );
+  });
+
+  it("should render component with custom text font size", () => {
+    render(<Tag text="Tag" textFontSize="30px" />);
+
+    const element = screen.getByTestId("tag");
+
+    expect(within(element).getByText("Tag")).toHaveStyleRule(
+      "font-size",
+      "30px"
+    );
+  });
+
+  it("should render component with custom text font family", () => {
+    render(<Tag text="Tag" textFontFamily="Times New Roman" />);
+
+    const element = screen.getByTestId("tag");
+
+    expect(within(element).getByText("Tag")).toHaveStyleRule(
+      "font-family",
+      "Times New Roman"
+    );
   });
 });

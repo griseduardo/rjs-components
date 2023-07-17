@@ -13,14 +13,10 @@ type Story = StoryObj<typeof Text>;
 
 export const Color: Story = (args) => (
   <>
-    <p>Default:</p>
+    <p>- Default</p>
     <Text {...args}>Text</Text>
-    <p>color: #800080</p>
+    <p>- Update color</p>
     <Text {...args} color={"#800080"}>
-      Text
-    </Text>
-    <p>color: #008000</p>
-    <Text {...args} color={"#008000"}>
       Text
     </Text>
   </>
@@ -32,9 +28,10 @@ Color.args = {
 
 export const PredefinedWeight: Story = (args) => (
   <>
-    <p>Default:</p>
+    <p>- Update weight</p>
+    <p>normal (default)</p>
     <Text {...args}>Text</Text>
-    <p>Bold:</p>
+    <p>bold</p>
     <Text {...args} weight={"bold"}>
       Text
     </Text>
@@ -47,13 +44,9 @@ PredefinedWeight.args = {
 
 export const CustomFontWeight: Story = (args) => (
   <>
-    <p>Default:</p>
+    <p>- Default</p>
     <Text {...args}>Text</Text>
-    <p>fontWeight: 200</p>
-    <Text {...args} fontWeight={200}>
-      Text
-    </Text>
-    <p>fontWeight: 900</p>
+    <p>- Update fontWeight</p>
     <Text {...args} fontWeight={900}>
       Text
     </Text>
@@ -66,13 +59,9 @@ CustomFontWeight.args = {
 
 export const FontSize: Story = (args) => (
   <>
-    <p>Default:</p>
+    <p>- Default</p>
     <Text {...args}>Text</Text>
-    <p>fontSize: 20px</p>
-    <Text {...args} fontSize={"20px"}>
-      Text
-    </Text>
-    <p>fontSize: 30px</p>
+    <p>- Update fontSize</p>
     <Text {...args} fontSize={"30px"}>
       Text
     </Text>
@@ -85,14 +74,10 @@ FontSize.args = {
 
 export const FontFamily: Story = (args) => (
   <>
-    <p>Default:</p>
+    <p>- Default</p>
     <Text {...args}>Text</Text>
-    <p>fontFamily: Times New Roman</p>
+    <p>- Update fontFamily</p>
     <Text {...args} fontFamily={"Times New Roman"}>
-      Text
-    </Text>
-    <p>fontFamily: Lucida Console</p>
-    <Text {...args} fontFamily={"Lucida Console"}>
       Text
     </Text>
   </>

@@ -57,7 +57,7 @@ Color.args = {
 export const PredefinedFormat: Story = (args) => (
   <>
     <p>- Update format</p>
-    <p>small (default)</p>
+    <p>default</p>
     <Button {...args} />
     <p>semiRounded</p>
     <Button {...args} format={"semiRounded"} />
