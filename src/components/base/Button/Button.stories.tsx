@@ -1,6 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import Button from "./Button";
+import Paragraph from "../Paragraph/Paragraph";
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -13,30 +14,30 @@ type Story = StoryObj<typeof Button>;
 
 export const Color: Story = (args) => (
   <>
-    <p>- Default</p>
-    <p>Active</p>
+    <Paragraph>- Default</Paragraph>
+    <Paragraph>Active</Paragraph>
     <Button {...args} />
-    <p>Disabled</p>
+    <Paragraph>Disabled</Paragraph>
     <Button {...args} disabled={true} />
-    <p>- Update backgroundColor and hoverColor</p>
-    <p>Active</p>
+    <Paragraph>- Update backgroundColor and hoverColor</Paragraph>
+    <Paragraph>Active</Paragraph>
     <Button {...args} backgroundColor={"#ee4b2b"} hoverColor={"#d22b2b"} />
-    <p>Disabled</p>
+    <Paragraph>Disabled</Paragraph>
     <Button
       {...args}
       disabled={true}
       backgroundColor={"#ee4b2b"}
       hoverColor={"#d22b2b"}
     />
-    <p>- Update textColor</p>
-    <p>Active</p>
+    <Paragraph>- Update textColor</Paragraph>
+    <Paragraph>Active</Paragraph>
     <Button
       {...args}
       backgroundColor={"#ee4b2b"}
       hoverColor={"#d22b2b"}
       textColor={"#fff"}
     />
-    <p>Disabled</p>
+    <Paragraph>Disabled</Paragraph>
     <Button
       {...args}
       disabled={true}
@@ -56,12 +57,12 @@ Color.args = {
 
 export const PredefinedFormat: Story = (args) => (
   <>
-    <p>- Update format</p>
-    <p>default</p>
+    <Paragraph>- Update format</Paragraph>
+    <Paragraph>default</Paragraph>
     <Button {...args} />
-    <p>semiRounded</p>
+    <Paragraph>semiRounded</Paragraph>
     <Button {...args} format={"semiRounded"} />
-    <p>rounded</p>
+    <Paragraph>rounded</Paragraph>
     <Button {...args} format={"rounded"} />
   </>
 );
@@ -73,9 +74,9 @@ PredefinedFormat.args = {
 
 export const CustomFormat: Story = (args) => (
   <>
-    <p>- Default</p>
+    <Paragraph>- Default</Paragraph>
     <Button {...args} />
-    <p>- Update borderRadius</p>
+    <Paragraph>- Update borderRadius</Paragraph>
     <Button {...args} borderRadius={"15px 2px"} />
   </>
 );
@@ -87,12 +88,12 @@ CustomFormat.args = {
 
 export const PredefinedSize: Story = (args) => (
   <>
-    <p>- Update size</p>
-    <p>small (default)</p>
+    <Paragraph>- Update size</Paragraph>
+    <Paragraph>small (default)</Paragraph>
     <Button {...args} />
-    <p>medium</p>
+    <Paragraph>medium</Paragraph>
     <Button {...args} size={"medium"} />
-    <p>large</p>
+    <Paragraph>large</Paragraph>
     <Button {...args} size={"large"} />
   </>
 );
@@ -104,9 +105,9 @@ PredefinedSize.args = {
 
 export const CustomSize: Story = (args) => (
   <>
-    <p>- Default</p>
+    <Paragraph>- Default</Paragraph>
     <Button {...args} />
-    <p>- Update padding</p>
+    <Paragraph>- Update padding</Paragraph>
     <Button {...args} padding={"20px 40px"} />
   </>
 );
@@ -118,16 +119,16 @@ CustomSize.args = {
 
 export const textProperty: Story = (args) => (
   <>
-    <p>- Update textWeight (predefined weight)</p>
-    <p>normal (default)</p>
+    <Paragraph>- Update textWeight (predefined weight)</Paragraph>
+    <Paragraph>normal (default)</Paragraph>
     <Button {...args} />
-    <p>bold</p>
+    <Paragraph>bold</Paragraph>
     <Button {...args} textWeight={"bold"} />
-    <p>- Update textFontWeight (custom weight)</p>
+    <Paragraph>- Update textFontWeight (custom weight)</Paragraph>
     <Button {...args} textFontWeight={100} />
-    <p>- Update textFontFamily</p>
+    <Paragraph>- Update textFontFamily</Paragraph>
     <Button {...args} textFontFamily={"Times New Roman"} />
-    <p>- Update textFontSize</p>
+    <Paragraph>- Update textFontSize</Paragraph>
     <Button {...args} textFontSize={"20px"} />
   </>
 );

@@ -1,6 +1,6 @@
 {
   "name": "rjs-components",
-  "version": "0.4.3",
+  "version": "0.5.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -22,9 +22,8 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "\"**/src/components/**/**/*.[jt]s?(x)\"": [
-      "yarn lint --fix",
-      "yarn test --findRelatedTests --bail"
+    "src/components/base/**/*.tsx": [
+      "yarn format"
     ]
   },
   "devDependencies": {

@@ -18,7 +18,7 @@ npm install rjs-components
 
 ## Storybook
 
-The lib components are presented in [storybook](https://649f75c489527d98e48de36a-iyhulftslt.chromatic.com).
+The lib components are presented in [storybook](https://649f75c489527d98e48de36a-zjpdiavntc.chromatic.com).
 
 ## Import components
 
@@ -30,8 +30,9 @@ import { Button } from "rjs-components"
 
 ## Base components
 
-| Component | Docs                          |
-|-----------|-------------------------------|
-| Button    | [Button](docs/base/button.md) |
-| Tag       | [Tag](docs/base/tag.md)       |
-| Text      | [Text](docs/base/text.md)     |
+| Component | Docs                                |
+|-----------|-------------------------------------|
+| Button    | [Button](docs/base/button.md)       |
+| Paragraph | [Paragraph](docs/base/paragraph.md) |
+| Tag       | [Tag](docs/base/tag.md)             |
+| Text      | [Text](docs/base/text.md)           |

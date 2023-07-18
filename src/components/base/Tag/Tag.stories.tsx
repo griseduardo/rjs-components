@@ -1,6 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import Tag from "./Tag";
+import Paragraph from "../Paragraph/Paragraph";
 
 const meta: Meta<typeof Tag> = {
   component: Tag,
@@ -13,14 +14,14 @@ type Story = StoryObj<typeof Tag>;
 
 export const PredefinedType: Story = (args) => (
   <>
-    <p>- Update type</p>
-    <p>default</p>
+    <Paragraph>- Update type</Paragraph>
+    <Paragraph>default</Paragraph>
     <Tag {...args} />
-    <p>success</p>
+    <Paragraph>success</Paragraph>
     <Tag {...args} text={"Success"} type={"success"} />
-    <p>alert</p>
+    <Paragraph>alert</Paragraph>
     <Tag {...args} text={"Alert"} type={"alert"} />
-    <p>error</p>
+    <Paragraph>error</Paragraph>
     <Tag {...args} text={"Error"} type={"error"} />
   </>
 );
@@ -31,11 +32,11 @@ PredefinedType.args = {
 
 export const Color: Story = (args) => (
   <>
-    <p>- Default</p>
+    <Paragraph>- Default</Paragraph>
     <Tag {...args} />
-    <p>- Update backgroundColor</p>
+    <Paragraph>- Update backgroundColor</Paragraph>
     <Tag {...args} backgroundColor={"#89cff0"} />
-    <p>- Update textColor</p>
+    <Paragraph>- Update textColor</Paragraph>
     <Tag {...args} backgroundColor={"#89cff0"} textColor={"#0047ab"} />
   </>
 );
@@ -48,12 +49,12 @@ Color.args = {
 
 export const PredefinedFormat: Story = (args) => (
   <>
-    <p>- Update format</p>
-    <p>default</p>
+    <Paragraph>- Update format</Paragraph>
+    <Paragraph>default</Paragraph>
     <Tag {...args} />
-    <p>semiRounded</p>
+    <Paragraph>semiRounded</Paragraph>
     <Tag {...args} format={"semiRounded"} />
-    <p>rounded</p>
+    <Paragraph>rounded</Paragraph>
     <Tag {...args} format={"rounded"} />
   </>
 );
@@ -65,9 +66,9 @@ PredefinedFormat.args = {
 
 export const CustomFormat: Story = (args) => (
   <>
-    <p>- Default</p>
+    <Paragraph>- Default</Paragraph>
     <Tag {...args} />
-    <p>- Update borderRadius</p>
+    <Paragraph>- Update borderRadius</Paragraph>
     <Tag {...args} borderRadius={"15px 2px"} />
   </>
 );
@@ -79,12 +80,12 @@ CustomFormat.args = {
 
 export const PredefinedSize: Story = (args) => (
   <>
-    <p>- Update size</p>
-    <p>small (default)</p>
+    <Paragraph>- Update size</Paragraph>
+    <Paragraph>small (default)</Paragraph>
     <Tag {...args} />
-    <p>medium</p>
+    <Paragraph>medium</Paragraph>
     <Tag {...args} size={"medium"} />
-    <p>large</p>
+    <Paragraph>large</Paragraph>
     <Tag {...args} size={"large"} />
   </>
 );
@@ -96,9 +97,9 @@ PredefinedSize.args = {
 
 export const CustomSize: Story = (args) => (
   <>
-    <p>- Default</p>
+    <Paragraph>- Default</Paragraph>
     <Tag {...args} />
-    <p>-Update padding</p>
+    <Paragraph>-Update padding</Paragraph>
     <Tag {...args} padding={"20px 10px"} />
   </>
 );
@@ -110,16 +111,16 @@ CustomSize.args = {
 
 export const textProperty: Story = (args) => (
   <>
-    <p>- Update textWeight (predefined weight)</p>
-    <p>normal (default)</p>
+    <Paragraph>- Update textWeight (predefined weight)</Paragraph>
+    <Paragraph>normal (default)</Paragraph>
     <Tag {...args} />
-    <p>bold</p>
+    <Paragraph>bold</Paragraph>
     <Tag {...args} textWeight={"bold"} />
-    <p>- Update textFontWeight (custom weight)</p>
+    <Paragraph>- Update textFontWeight (custom weight)</Paragraph>
     <Tag {...args} textFontWeight={100} />
-    <p>- Update textFontFamily</p>
+    <Paragraph>- Update textFontFamily</Paragraph>
     <Tag {...args} textFontFamily={"Times New Roman"} />
-    <p>- Update textFontSize</p>
+    <Paragraph>- Update textFontSize</Paragraph>
     <Tag {...args} textFontSize={"20px"} />
   </>
 );

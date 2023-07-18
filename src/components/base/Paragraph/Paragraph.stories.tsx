@@ -1,25 +1,24 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import Text from "./Text";
-import Paragraph from "../Paragraph/Paragraph";
+import Paragraph from "./Paragraph";
 
-const meta: Meta<typeof Text> = {
-  component: Text,
-  title: "Text",
+const meta: Meta<typeof Paragraph> = {
+  component: Paragraph,
+  title: "Paragraph",
   argTypes: {},
 };
 export default meta;
 
-type Story = StoryObj<typeof Text>;
+type Story = StoryObj<typeof Paragraph>;
 
 export const Color: Story = (args) => (
   <>
     <Paragraph>- Default</Paragraph>
-    <Text {...args}>Text</Text>
+    <Paragraph {...args}>Paragraph</Paragraph>
     <Paragraph>- Update color</Paragraph>
-    <Text {...args} color={"#800080"}>
-      Text
-    </Text>
+    <Paragraph {...args} color={"#800080"}>
+      Paragraph
+    </Paragraph>
   </>
 );
 
@@ -31,11 +30,11 @@ export const PredefinedWeight: Story = (args) => (
   <>
     <Paragraph>- Update weight</Paragraph>
     <Paragraph>normal (default)</Paragraph>
-    <Text {...args}>Text</Text>
+    <Paragraph {...args}>Paragraph</Paragraph>
     <Paragraph>bold</Paragraph>
-    <Text {...args} weight={"bold"}>
-      Text
-    </Text>
+    <Paragraph {...args} weight={"bold"}>
+      Paragraph
+    </Paragraph>
   </>
 );
 
@@ -46,11 +45,11 @@ PredefinedWeight.args = {
 export const CustomFontWeight: Story = (args) => (
   <>
     <Paragraph>- Default</Paragraph>
-    <Text {...args}>Text</Text>
+    <Paragraph {...args}>Paragraph</Paragraph>
     <Paragraph>- Update fontWeight</Paragraph>
-    <Text {...args} fontWeight={900}>
-      Text
-    </Text>
+    <Paragraph {...args} fontWeight={900}>
+      Paragraph
+    </Paragraph>
   </>
 );
 
@@ -61,11 +60,11 @@ CustomFontWeight.args = {
 export const FontSize: Story = (args) => (
   <>
     <Paragraph>- Default</Paragraph>
-    <Text {...args}>Text</Text>
+    <Paragraph {...args}>Paragraph</Paragraph>
     <Paragraph>- Update fontSize</Paragraph>
-    <Text {...args} fontSize={"30px"}>
-      Text
-    </Text>
+    <Paragraph {...args} fontSize={"30px"}>
+      Paragraph
+    </Paragraph>
   </>
 );
 
@@ -76,11 +75,11 @@ FontSize.args = {
 export const FontFamily: Story = (args) => (
   <>
     <Paragraph>- Default</Paragraph>
-    <Text {...args}>Text</Text>
+    <Paragraph {...args}>Paragraph</Paragraph>
     <Paragraph>- Update fontFamily</Paragraph>
-    <Text {...args} fontFamily={"Times New Roman"}>
-      Text
-    </Text>
+    <Paragraph {...args} fontFamily={"Times New Roman"}>
+      Paragraph
+    </Paragraph>
   </>
 );
 

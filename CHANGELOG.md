@@ -1,3 +1,9 @@
+## 0.5.0
+
+_Jul. 18, 2023_
+
+- add Paragraph base component
+
 ## 0.4.3
 
 _Jul. 17, 2023_
