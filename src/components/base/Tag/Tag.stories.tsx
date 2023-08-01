@@ -2,6 +2,8 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import Tag from "./Tag";
 import Paragraph from "../Paragraph/Paragraph";
+import Text from "../Text/Text";
+import Div from "../Div/Div";
 
 const meta: Meta<typeof Tag> = {
   component: Tag,
@@ -14,15 +16,41 @@ type Story = StoryObj<typeof Tag>;
 
 export const PredefinedType: Story = (args) => (
   <>
-    <Paragraph>- Update type</Paragraph>
-    <Paragraph>default</Paragraph>
-    <Tag {...args} />
-    <Paragraph>success</Paragraph>
-    <Tag {...args} text={"Success"} type={"success"} />
-    <Paragraph>alert</Paragraph>
-    <Tag {...args} text={"Alert"} type={"alert"} />
-    <Paragraph>error</Paragraph>
-    <Tag {...args} text={"Error"} type={"error"} />
+    <Text>- Update type</Text>
+    <Div alignContent="center" margin="0 0 20px 0">
+      <Div margin="0 10px">
+        <Div justifyContent="center">
+          <Paragraph>default</Paragraph>
+        </Div>
+        <Div justifyContent="center">
+          <Tag {...args} />
+        </Div>
+      </Div>
+      <Div margin="0 10px">
+        <Div justifyContent="center">
+          <Paragraph>success</Paragraph>
+        </Div>
+        <Div justifyContent="center">
+          <Tag {...args} text={"Success"} type={"success"} />
+        </Div>
+      </Div>
+      <Div margin="0 10px">
+        <Div justifyContent="center">
+          <Paragraph>alert</Paragraph>
+        </Div>
+        <Div justifyContent="center">
+          <Tag {...args} text={"Alert"} type={"alert"} />
+        </Div>
+      </Div>
+      <Div margin="0 10px">
+        <Div justifyContent="center">
+          <Paragraph>error</Paragraph>
+        </Div>
+        <Div justifyContent="center">
+          <Tag {...args} text={"Error"} type={"error"} />
+        </Div>
+      </Div>
+    </Div>
   </>
 );
 
@@ -32,12 +60,18 @@ PredefinedType.args = {
 
 export const Color: Story = (args) => (
   <>
-    <Paragraph>- Default</Paragraph>
-    <Tag {...args} />
+    <Text>- Default</Text>
+    <Div margin="16px 10px 0 10px">
+      <Tag {...args} />
+    </Div>
     <Paragraph>- Update backgroundColor</Paragraph>
-    <Tag {...args} backgroundColor={"#89cff0"} />
+    <Div margin="0 10px">
+      <Tag {...args} backgroundColor={"#89cff0"} />
+    </Div>
     <Paragraph>- Update textColor</Paragraph>
-    <Tag {...args} backgroundColor={"#89cff0"} textColor={"#0047ab"} />
+    <Div margin="0 10px">
+      <Tag {...args} backgroundColor={"#89cff0"} textColor={"#0047ab"} />
+    </Div>
   </>
 );
 
@@ -49,13 +83,33 @@ Color.args = {
 
 export const PredefinedFormat: Story = (args) => (
   <>
-    <Paragraph>- Update format</Paragraph>
-    <Paragraph>default</Paragraph>
-    <Tag {...args} />
-    <Paragraph>semiRounded</Paragraph>
-    <Tag {...args} format={"semiRounded"} />
-    <Paragraph>rounded</Paragraph>
-    <Tag {...args} format={"rounded"} />
+    <Text>- Update format</Text>
+    <Div alignContent="center" margin="0 0 20px 0">
+      <Div margin="0 10px">
+        <Div justifyContent="center">
+          <Paragraph>default</Paragraph>
+        </Div>
+        <Div justifyContent="center">
+          <Tag {...args} />
+        </Div>
+      </Div>
+      <Div margin="0 10px">
+        <Div justifyContent="center">
+          <Paragraph>semiRounded</Paragraph>
+        </Div>
+        <Div justifyContent="center">
+          <Tag {...args} format={"semiRounded"} />
+        </Div>
+      </Div>
+      <Div margin="0 10px">
+        <Div justifyContent="center">
+          <Paragraph>rounded</Paragraph>
+        </Div>
+        <Div justifyContent="center">
+          <Tag {...args} format={"rounded"} />
+        </Div>
+      </Div>
+    </Div>
   </>
 );
 
@@ -66,10 +120,14 @@ PredefinedFormat.args = {
 
 export const CustomFormat: Story = (args) => (
   <>
-    <Paragraph>- Default</Paragraph>
-    <Tag {...args} />
+    <Text>- Default</Text>
+    <Div margin="16px 10px 0 10px">
+      <Tag {...args} />
+    </Div>
     <Paragraph>- Update borderRadius</Paragraph>
-    <Tag {...args} borderRadius={"15px 2px"} />
+    <Div margin="0 10px">
+      <Tag {...args} borderRadius={"15px 2px"} />
+    </Div>
   </>
 );
 
@@ -80,13 +138,33 @@ CustomFormat.args = {
 
 export const PredefinedSize: Story = (args) => (
   <>
-    <Paragraph>- Update size</Paragraph>
-    <Paragraph>small (default)</Paragraph>
-    <Tag {...args} />
-    <Paragraph>medium</Paragraph>
-    <Tag {...args} size={"medium"} />
-    <Paragraph>large</Paragraph>
-    <Tag {...args} size={"large"} />
+    <Text>- Update size</Text>
+    <Div alignContent="center" margin="0 0 20px 0">
+      <Div margin="0 10px">
+        <Div justifyContent="center">
+          <Paragraph>small (default)</Paragraph>
+        </Div>
+        <Div justifyContent="center">
+          <Tag {...args} />
+        </Div>
+      </Div>
+      <Div margin="0 10px">
+        <Div justifyContent="center">
+          <Paragraph>medium</Paragraph>
+        </Div>
+        <Div justifyContent="center">
+          <Tag {...args} size={"medium"} />
+        </Div>
+      </Div>
+      <Div margin="0 10px">
+        <Div justifyContent="center">
+          <Paragraph>large</Paragraph>
+        </Div>
+        <Div justifyContent="center">
+          <Tag {...args} size={"large"} />
+        </Div>
+      </Div>
+    </Div>
   </>
 );
 
@@ -97,10 +175,14 @@ PredefinedSize.args = {
 
 export const CustomSize: Story = (args) => (
   <>
-    <Paragraph>- Default</Paragraph>
-    <Tag {...args} />
+    <Text>- Default</Text>
+    <Div margin="16px 10px 0 10px">
+      <Tag {...args} />
+    </Div>
     <Paragraph>-Update padding</Paragraph>
-    <Tag {...args} padding={"20px 10px"} />
+    <Div margin="0 10px">
+      <Tag {...args} padding={"20px 10px"} />
+    </Div>
   </>
 );
 
@@ -111,17 +193,37 @@ CustomSize.args = {
 
 export const textProperty: Story = (args) => (
   <>
-    <Paragraph>- Update textWeight (predefined weight)</Paragraph>
-    <Paragraph>normal (default)</Paragraph>
-    <Tag {...args} />
-    <Paragraph>bold</Paragraph>
-    <Tag {...args} textWeight={"bold"} />
+    <Text>- Update textWeight (predefined weight)</Text>
+    <Div alignContent="center" margin="0 0 20px 0">
+      <Div margin="0 10px">
+        <Div justifyContent="center">
+          <Paragraph>normal (default)</Paragraph>
+        </Div>
+        <Div justifyContent="center">
+          <Tag {...args} />
+        </Div>
+      </Div>
+      <Div margin="0 10px">
+        <Div justifyContent="center">
+          <Paragraph>bold</Paragraph>
+        </Div>
+        <Div justifyContent="center">
+          <Tag {...args} textWeight={"bold"} />
+        </Div>
+      </Div>
+    </Div>
     <Paragraph>- Update textFontWeight (custom weight)</Paragraph>
-    <Tag {...args} textFontWeight={100} />
+    <Div margin="0 10px">
+      <Tag {...args} textFontWeight={100} />
+    </Div>
     <Paragraph>- Update textFontFamily</Paragraph>
-    <Tag {...args} textFontFamily={"Times New Roman"} />
+    <Div margin="0 10px">
+      <Tag {...args} textFontFamily={"Times New Roman"} />
+    </Div>
     <Paragraph>- Update textFontSize</Paragraph>
-    <Tag {...args} textFontSize={"20px"} />
+    <Div margin="0 10px">
+      <Tag {...args} textFontSize={"20px"} />
+    </Div>
   </>
 );
 

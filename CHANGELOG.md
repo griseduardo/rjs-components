@@ -1,3 +1,10 @@
+## 0.6.0
+
+_Aug. 01, 2023_
+
+- add Div base component
+- update Storybook layout
+
 ## 0.5.0
 
 _Jul. 18, 2023_
