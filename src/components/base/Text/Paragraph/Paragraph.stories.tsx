@@ -1,29 +1,29 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import Text from "./Text";
-import Paragraph from "../Paragraph/Paragraph";
-import Div from "../Div/Div";
+import Paragraph from "./Paragraph";
+import Div from "../../Div/Div";
+import Text from "../Text/Text";
 
-const meta: Meta<typeof Text> = {
-  component: Text,
-  title: "Text",
+const meta: Meta<typeof Paragraph> = {
+  component: Paragraph,
+  title: "Paragraph",
   argTypes: {},
 };
 export default meta;
 
-type Story = StoryObj<typeof Text>;
+type Story = StoryObj<typeof Paragraph>;
 
 export const Color: Story = (args) => (
   <>
     <Text>- Default</Text>
     <Div margin="16px 10px 0 10px">
-      <Text {...args}>Text</Text>
+      <Paragraph {...args}>Paragraph</Paragraph>
     </Div>
     <Paragraph>- Update color</Paragraph>
     <Div margin="0 10px">
-      <Text {...args} color={"#800080"}>
-        Text
-      </Text>
+      <Paragraph {...args} color={"#800080"}>
+        Paragraph
+      </Paragraph>
     </Div>
   </>
 );
@@ -41,7 +41,7 @@ export const PredefinedWeight: Story = (args) => (
           <Paragraph>normal (default)</Paragraph>
         </Div>
         <Div justifyContent="center">
-          <Text {...args}>Text</Text>
+          <Paragraph {...args}>Paragraph</Paragraph>
         </Div>
       </Div>
       <Div margin="0 10px">
@@ -49,9 +49,9 @@ export const PredefinedWeight: Story = (args) => (
           <Paragraph>bold</Paragraph>
         </Div>
         <Div justifyContent="center">
-          <Text {...args} weight={"bold"}>
-            Text
-          </Text>
+          <Paragraph {...args} weight={"bold"}>
+            Paragraph
+          </Paragraph>
         </Div>
       </Div>
     </Div>
@@ -66,13 +66,13 @@ export const CustomFontWeight: Story = (args) => (
   <>
     <Text>- Default</Text>
     <Div margin="16px 10px 0 10px">
-      <Text {...args}>Text</Text>
+      <Paragraph {...args}>Paragraph</Paragraph>
     </Div>
     <Paragraph>- Update fontWeight</Paragraph>
     <Div margin="0 10px">
-      <Text {...args} fontWeight={900}>
-        Text
-      </Text>
+      <Paragraph {...args} fontWeight={900}>
+        Paragraph
+      </Paragraph>
     </Div>
   </>
 );
@@ -85,13 +85,13 @@ export const FontSize: Story = (args) => (
   <>
     <Text>- Default</Text>
     <Div margin="16px 10px 0 10px">
-      <Text {...args}>Text</Text>
+      <Paragraph {...args}>Paragraph</Paragraph>
     </Div>
     <Paragraph>- Update fontSize</Paragraph>
     <Div margin="0 10px">
-      <Text {...args} fontSize={"30px"}>
-        Text
-      </Text>
+      <Paragraph {...args} fontSize={"30px"}>
+        Paragraph
+      </Paragraph>
     </Div>
   </>
 );
@@ -104,13 +104,13 @@ export const FontFamily: Story = (args) => (
   <>
     <Text>- Default</Text>
     <Div margin="16px 10px 0 10px">
-      <Text {...args}>Text</Text>
+      <Paragraph {...args}>Paragraph</Paragraph>
     </Div>
     <Paragraph>- Update fontFamily</Paragraph>
     <Div margin="0 10px">
-      <Text {...args} fontFamily={"Times New Roman"}>
-        Text
-      </Text>
+      <Paragraph {...args} fontFamily={"Times New Roman"}>
+        Paragraph
+      </Paragraph>
     </Div>
   </>
 );

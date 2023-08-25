@@ -1,3 +1,10 @@
+## 0.6.1
+
+_Aug. 25, 2023_
+
+- adjust Div base component tests
+- use same interface and styled for Text and Paragraph base components
+
 ## 0.6.0
 
 _Aug. 01, 2023_

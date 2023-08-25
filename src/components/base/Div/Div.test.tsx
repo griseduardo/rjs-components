@@ -35,7 +35,7 @@ describe("<Div />", () => {
   it("should render component with custom align content", () => {
     render(<Div alignContent="center">Div</Div>);
 
-    const element = screen.getByTestId("Div");
+    const element = screen.getByText("Div");
 
     expect(element).toHaveStyleRule("display", "flex");
     expect(element).toHaveStyleRule("align-content", "center");
@@ -44,7 +44,7 @@ describe("<Div />", () => {
   it("should render component with custom justify content", () => {
     render(<Div justifyContent="center">Div</Div>);
 
-    const element = screen.getByTestId("Div");
+    const element = screen.getByText("Div");
 
     expect(element).toHaveStyleRule("display", "flex");
     expect(element).toHaveStyleRule("justify-content", "center");

@@ -1,8 +1,8 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import Button from "./Button";
-import Text from "../Text/Text";
-import Paragraph from "../Paragraph/Paragraph";
+import Text from "../Text/Text/Text";
+import Paragraph from "../Text/Paragraph/Paragraph";
 import Div from "../Div/Div";
 
 const meta: Meta<typeof Button> = {
