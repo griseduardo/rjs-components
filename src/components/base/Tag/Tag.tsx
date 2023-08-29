@@ -1,20 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Text from "../Text/Text";
+import { CommonTagProps } from "../Common.types";
 
-export interface TagProps {
-  text: string;
+export interface TagProps extends CommonTagProps {
   type?: "default" | "success" | "alert" | "error";
-  textColor?: string;
-  textWeight?: "normal" | "bold";
-  textFontWeight?: number;
-  textFontSize?: string;
-  textFontFamily?: string;
-  backgroundColor?: string;
-  format?: "default" | "semiRounded" | "rounded";
-  borderRadius?: string;
-  size?: "small" | "medium" | "large";
-  padding?: string;
 }
 
 export const StyledTag = styled.div<TagProps>`

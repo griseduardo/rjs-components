@@ -1,3 +1,10 @@
+## 0.6.2
+
+_Aug. 29, 2023_
+
+- create common types for base components
+- upgrade storybook version to 7.4.0
+
 ## 0.6.1
 
 _Aug. 25, 2023_

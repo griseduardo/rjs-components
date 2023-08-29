@@ -1,16 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { CommonTextProps } from "../Common.types";
 
-export interface ParagraphProps {
-  children: React.ReactNode;
-  color?: string;
-  weight?: "normal" | "bold";
-  fontWeight?: number;
-  fontSize?: string;
-  fontFamily?: string;
-}
-
-export const StyledParagraph = styled.p<ParagraphProps>`
+export const StyledParagraph = styled.p<CommonTextProps>`
   color: ${(props) => (props.color ? props.color : "#000")};
   font-size: ${(props) => (props.fontSize ? props.fontSize : "16px")};
   font-weight: ${(props) =>
@@ -29,7 +21,7 @@ const Paragraph = ({
   fontWeight,
   fontSize,
   fontFamily,
-}: ParagraphProps) => (
+}: CommonTextProps) => (
   <StyledParagraph
     color={color}
     weight={weight}

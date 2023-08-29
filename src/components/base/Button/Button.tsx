@@ -1,20 +1,10 @@
 import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
 import Text from "../Text/Text";
+import { CommonTagProps } from "../Common.types";
 
-export interface ButtonProps {
-  text: string;
-  textColor?: string;
-  textWeight?: "normal" | "bold";
-  textFontWeight?: number;
-  textFontSize?: string;
-  textFontFamily?: string;
-  backgroundColor?: string;
+export interface ButtonProps extends CommonTagProps {
   hoverColor?: string;
-  format?: "default" | "semiRounded" | "rounded";
-  borderRadius?: string;
-  size?: "small" | "medium" | "large";
-  padding?: string;
   disabled?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
