@@ -12,7 +12,7 @@ describe("<Button />", () => {
 
     const element = screen.getByRole("button", { name: "Button" });
 
-    expect(element).toBeInTheDocument;
+    expect(element).toBeInTheDocument();
     expect(element).toHaveStyleRule("background-color", "#d3d3d3");
     expect(element).toHaveStyleRule("border-radius", "0px");
     expect(element).toHaveStyleRule("padding", "7px");

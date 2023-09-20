@@ -1,3 +1,11 @@
+## 0.6.3
+
+_Set. 20, 2023_
+
+- add Img base component
+- refactor base component tests
+- add public dir for storybook images
+
 ## 0.6.2
 
 _Aug. 29, 2023_

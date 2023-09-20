@@ -9,9 +9,7 @@ describe("<Div />", () => {
   it("should render component with default properties", () => {
     render(<Div>Div</Div>);
 
-    const element = screen.getByText("Div");
-
-    expect(element).toBeInTheDocument;
+    expect(screen.getByText("Div")).toBeInTheDocument();
   });
 
   it("should render component with custom margin", () => {

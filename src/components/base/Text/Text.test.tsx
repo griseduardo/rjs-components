@@ -11,7 +11,7 @@ describe("<Text />", () => {
 
     const element = screen.getByText("Text");
 
-    expect(element).toBeInTheDocument;
+    expect(element).toBeInTheDocument();
     expect(element).toHaveStyleRule("color", "#000");
     expect(element).toHaveStyleRule("font-size", "16px");
     expect(element).toHaveStyleRule("font-weight", "normal");
