@@ -6,15 +6,32 @@ export interface ImgProps {
   alt?: string;
   height?: string;
   width?: string;
+  format?: string;
+  borderRadius?: string;
 }
 
 export const StyledImg = styled.img<ImgProps>`
   height: ${(props) => props.height || "auto"};
-  width: ${(props) => (props.width ? props.width : "auto")};
+  width: ${(props) => props.width || "auto"};
+  border-radius: ${(props) =>
+    props.borderRadius
+      ? props.borderRadius
+      : props.format === "rounded"
+      ? "30px"
+      : props.format === "semiRounded"
+      ? "5px"
+      : "0px"};
 `;
 
-const Img = ({ src, alt, height, width }: ImgProps) => (
-  <StyledImg src={src} alt={alt} height={height} width={width} />
+const Img = ({ src, alt, height, width, format, borderRadius }: ImgProps) => (
+  <StyledImg
+    src={src}
+    alt={alt}
+    height={height}
+    width={width}
+    format={format}
+    borderRadius={borderRadius}
+  />
 );
 
 export default Img;

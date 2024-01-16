@@ -7,7 +7,7 @@ export interface CommonTextProps {
   fontFamily?: string;
 }
 
-export interface CommonTagProps {
+export interface CommonButtonTagProps {
   text: string;
   textColor?: string;
   textWeight?: "normal" | "bold";
@@ -19,4 +19,8 @@ export interface CommonTagProps {
   borderRadius?: string;
   size?: "small" | "medium" | "large";
   padding?: string;
+}
+
+export interface CommonTagProps extends CommonButtonTagProps {
+  type?: "default" | "success" | "alert" | "error";
 }

@@ -3,11 +3,7 @@ import styled from "styled-components";
 import Text from "../Text/Text";
 import { CommonTagProps } from "../Common.types";
 
-export interface TagProps extends CommonTagProps {
-  type?: "default" | "success" | "alert" | "error";
-}
-
-export const StyledTag = styled.div<TagProps>`
+export const StyledTag = styled.div<CommonTagProps>`
   border: none;
   padding: ${(props) =>
     props.padding
@@ -52,7 +48,7 @@ const Tag = ({
   borderRadius,
   size,
   padding,
-}: TagProps) => (
+}: CommonTagProps) => (
   <StyledTag
     data-testid="tag"
     text={text}

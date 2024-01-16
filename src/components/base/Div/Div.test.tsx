@@ -24,6 +24,12 @@ describe("<Div />", () => {
     expect(screen.getByText("Div")).toHaveStyleRule("padding", "20px");
   });
 
+  it("should render component with custom height", () => {
+    render(<Div height="20px">Div</Div>);
+
+    expect(screen.getByText("Div")).toHaveStyleRule("height", "20px");
+  });
+
   it("should render component with custom width", () => {
     render(<Div width="20px">Div</Div>);
 
@@ -37,6 +43,15 @@ describe("<Div />", () => {
 
     expect(element).toHaveStyleRule("display", "flex");
     expect(element).toHaveStyleRule("align-content", "center");
+  });
+
+  it("should render component with custom align items", () => {
+    render(<Div alignItems="center">Div</Div>);
+
+    const element = screen.getByText("Div");
+
+    expect(element).toHaveStyleRule("display", "flex");
+    expect(element).toHaveStyleRule("align-items", "center");
   });
 
   it("should render component with custom justify content", () => {

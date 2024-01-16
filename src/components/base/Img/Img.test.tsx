@@ -48,4 +48,31 @@ describe("<Img />", () => {
 
     expect(screen.getByRole("img", { name: "alt" })).toBeInTheDocument();
   });
+
+  it("should render component with semi rounded format", () => {
+    render(<Img src="image" format="semiRounded" />);
+
+    expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
+      "border-radius",
+      "5px"
+    );
+  });
+
+  it("should render component with rounded format", () => {
+    render(<Img src="image" format="rounded" />);
+
+    expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
+      "border-radius",
+      "30px"
+    );
+  });
+
+  it("should render component with custom border radius", () => {
+    render(<Img src="image" borderRadius="20px" />);
+
+    expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
+      "border-radius",
+      "20px"
+    );
+  });
 });

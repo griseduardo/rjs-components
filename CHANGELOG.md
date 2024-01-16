@@ -1,3 +1,12 @@
+## 0.7.0
+
+_Jan. 16, 2024_
+
+- add IconTag base component
+- add Div base component height and alignItems props
+- add Img base component format and borderRadius props
+- refactor some component types
+
 ## 0.6.3
 
 _Set. 20, 2023_

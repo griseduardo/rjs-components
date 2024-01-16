@@ -1,9 +1,9 @@
 import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
 import Text from "../Text/Text";
-import { CommonTagProps } from "../Common.types";
+import { CommonButtonTagProps } from "../Common.types";
 
-export interface ButtonProps extends CommonTagProps {
+export interface ButtonProps extends CommonButtonTagProps {
   hoverColor?: string;
   disabled?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
