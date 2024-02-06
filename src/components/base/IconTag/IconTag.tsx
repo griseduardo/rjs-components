@@ -5,6 +5,16 @@ import Img from "../Img";
 import Div from "../Div";
 import { CommonTagProps } from "../Common.types";
 
+export interface IconProps {
+  padding?: string;
+  iconHeight?: string;
+  iconWidth?: string;
+  src: string;
+  iconFormat?: "default" | "semiRounded" | "rounded";
+  format?: "default" | "semiRounded" | "rounded";
+  iconBorderRadius?: string;
+}
+
 export interface IconTagProps extends CommonTagProps {
   src: string;
   iconFormat?: "default" | "semiRounded" | "rounded";
@@ -49,6 +59,33 @@ export const StyledTag = styled.div<IconTagProps>`
   width: fit-content;
 `;
 
+const Icon = ({
+  padding,
+  iconHeight,
+  iconWidth,
+  src,
+  iconFormat,
+  format,
+  iconBorderRadius,
+}: IconProps) => {
+  return (
+    <Div
+      padding={padding}
+      height={iconHeight ? iconHeight : iconWidth ? "auto" : "30px"}
+      width={iconWidth || "auto"}
+      justifyContent={"center"}
+    >
+      <Img
+        src={src}
+        height={"100%"}
+        width={"100%"}
+        format={iconFormat || format}
+        borderRadius={iconBorderRadius}
+      />
+    </Div>
+  );
+};
+
 const IconTag = ({
   text,
   type,
@@ -86,7 +123,7 @@ const IconTag = ({
       iconWidth={iconWidth}
     >
       {iconPlacement != "right" && (
-        <Div
+        <Icon
           padding={
             spacing
               ? `0 ${spacing} 0 0`
@@ -96,18 +133,13 @@ const IconTag = ({
               ? "0 12px 0 0"
               : "0 7px 0 0"
           }
-          height={iconHeight ? iconHeight : iconWidth ? "auto" : "30px"}
-          width={iconWidth || "auto"}
-          justifyContent={"center"}
-        >
-          <Img
-            src={src}
-            height={"100%"}
-            width={"100%"}
-            format={iconFormat || format}
-            borderRadius={iconBorderRadius}
-          />
-        </Div>
+          iconHeight={iconHeight}
+          iconWidth={iconWidth}
+          src={src}
+          iconFormat={iconFormat}
+          format={format}
+          iconBorderRadius={iconBorderRadius}
+        />
       )}
       <Div>
         <Text
@@ -121,7 +153,7 @@ const IconTag = ({
         </Text>
       </Div>
       {iconPlacement === "right" && (
-        <Div
+        <Icon
           padding={
             spacing
               ? `0 0 0 ${spacing}`
@@ -131,18 +163,13 @@ const IconTag = ({
               ? "0 0 0 12px"
               : "0 0 0 7px"
           }
-          height={iconHeight ? iconHeight : iconWidth ? "auto" : "30px"}
-          width={iconWidth || "auto"}
-          justifyContent={"center"}
-        >
-          <Img
-            src={src}
-            height={"100%"}
-            width={"100%"}
-            format={iconFormat || format}
-            borderRadius={iconBorderRadius}
-          />
-        </Div>
+          iconHeight={iconHeight}
+          iconWidth={iconWidth}
+          src={src}
+          iconFormat={iconFormat}
+          format={format}
+          iconBorderRadius={iconBorderRadius}
+        />
       )}
     </StyledTag>
   );

@@ -1,3 +1,10 @@
+## 0.7.1
+
+_Fev. 06, 2024_
+
+- update IconTag doc
+- refactor IconTag component
+
 ## 0.7.0
 
 _Jan. 16, 2024_

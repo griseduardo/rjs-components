@@ -1,4 +1,4 @@
-# <Tag / >
+# <IconTag / >
 
 ## Props
 
@@ -36,10 +36,10 @@ SizeType = "small" | "medium" | "large"
 
 --------------------------------------------------------------
 
-The type props provides predefined text color and background color for tag, but is possible customize with textColor and backgroundColor props.
+The type props provides predefined text color and background color for icon tag, but is possible customize with textColor and backgroundColor props.
 
-The format props provides predefined formats for tag, but is possible customize with borderRadius props.
+The format props provides predefined formats for icon tag, but is possible customize with borderRadius props.
 
-The size props provides predefined sizes for tag, but is possible customize with padding props.
+The size props provides predefined sizes for icon tag, but is possible customize with padding props.
 
-The textWeight props provides predefined weights for tag text, but is possible customize with textFontWeight props.
+The textWeight props provides predefined weights for icon tag text, but is possible customize with textFontWeight props.
