@@ -67,24 +67,22 @@ const Icon = ({
   iconFormat,
   format,
   iconBorderRadius,
-}: IconProps) => {
-  return (
-    <Div
-      padding={padding}
-      height={iconHeight ? iconHeight : iconWidth ? "auto" : "30px"}
-      width={iconWidth || "auto"}
-      justifyContent={"center"}
-    >
-      <Img
-        src={src}
-        height={"100%"}
-        width={"100%"}
-        format={iconFormat || format}
-        borderRadius={iconBorderRadius}
-      />
-    </Div>
-  );
-};
+}: IconProps) => (
+  <Div
+    padding={padding}
+    height={iconHeight ? iconHeight : iconWidth ? "auto" : "30px"}
+    width={iconWidth || "auto"}
+    justifyContent={"center"}
+  >
+    <Img
+      src={src}
+      height={"100%"}
+      width={"100%"}
+      format={iconFormat || format}
+      borderRadius={iconBorderRadius}
+    />
+  </Div>
+);
 
 const IconTag = ({
   text,
@@ -106,73 +104,71 @@ const IconTag = ({
   iconBorderRadius,
   iconHeight,
   iconWidth,
-}: IconTagProps) => {
-  return (
-    <StyledTag
-      data-testid="tag"
-      text={text}
-      type={type}
-      backgroundColor={backgroundColor}
-      format={format}
-      borderRadius={borderRadius}
-      size={size}
-      padding={padding}
-      src={src}
-      spacing={spacing}
-      iconHeight={iconHeight}
-      iconWidth={iconWidth}
-    >
-      {iconPlacement != "right" && (
-        <Icon
-          padding={
-            spacing
-              ? `0 ${spacing} 0 0`
-              : size === "large"
-              ? "0 20px 0 0"
-              : size === "medium"
-              ? "0 12px 0 0"
-              : "0 7px 0 0"
-          }
-          iconHeight={iconHeight}
-          iconWidth={iconWidth}
-          src={src}
-          iconFormat={iconFormat}
-          format={format}
-          iconBorderRadius={iconBorderRadius}
-        />
-      )}
-      <Div>
-        <Text
-          color={textColor || "#fff"}
-          weight={textWeight}
-          fontWeight={textFontWeight}
-          fontSize={textFontSize}
-          fontFamily={textFontFamily}
-        >
-          {text}
-        </Text>
-      </Div>
-      {iconPlacement === "right" && (
-        <Icon
-          padding={
-            spacing
-              ? `0 0 0 ${spacing}`
-              : size === "large"
-              ? "0 0 0 20px"
-              : size === "medium"
-              ? "0 0 0 12px"
-              : "0 0 0 7px"
-          }
-          iconHeight={iconHeight}
-          iconWidth={iconWidth}
-          src={src}
-          iconFormat={iconFormat}
-          format={format}
-          iconBorderRadius={iconBorderRadius}
-        />
-      )}
-    </StyledTag>
-  );
-};
+}: IconTagProps) => (
+  <StyledTag
+    data-testid="tag"
+    text={text}
+    type={type}
+    backgroundColor={backgroundColor}
+    format={format}
+    borderRadius={borderRadius}
+    size={size}
+    padding={padding}
+    src={src}
+    spacing={spacing}
+    iconHeight={iconHeight}
+    iconWidth={iconWidth}
+  >
+    {iconPlacement != "right" && (
+      <Icon
+        padding={
+          spacing
+            ? `0 ${spacing} 0 0`
+            : size === "large"
+            ? "0 20px 0 0"
+            : size === "medium"
+            ? "0 12px 0 0"
+            : "0 7px 0 0"
+        }
+        iconHeight={iconHeight}
+        iconWidth={iconWidth}
+        src={src}
+        iconFormat={iconFormat}
+        format={format}
+        iconBorderRadius={iconBorderRadius}
+      />
+    )}
+    <Div>
+      <Text
+        color={textColor || "#fff"}
+        weight={textWeight}
+        fontWeight={textFontWeight}
+        fontSize={textFontSize}
+        fontFamily={textFontFamily}
+      >
+        {text}
+      </Text>
+    </Div>
+    {iconPlacement === "right" && (
+      <Icon
+        padding={
+          spacing
+            ? `0 0 0 ${spacing}`
+            : size === "large"
+            ? "0 0 0 20px"
+            : size === "medium"
+            ? "0 0 0 12px"
+            : "0 0 0 7px"
+        }
+        iconHeight={iconHeight}
+        iconWidth={iconWidth}
+        src={src}
+        iconFormat={iconFormat}
+        format={format}
+        iconBorderRadius={iconBorderRadius}
+      />
+    )}
+  </StyledTag>
+);
 
 export default IconTag;

@@ -1,3 +1,10 @@
+## 0.7.2
+
+_Fev. 08, 2024_
+
+- update lint-staged actions to run tests pre-commit
+- refactor base components format
+
 ## 0.7.1
 
 _Fev. 06, 2024_

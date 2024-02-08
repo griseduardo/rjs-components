@@ -1,6 +1,6 @@
 {
   "name": "rjs-components",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -23,7 +23,8 @@
   },
   "lint-staged": {
     "src/components/base/**/*.tsx": [
-      "yarn format"
+      "yarn format",
+      "yarn test --findRelatedTests --bail"
     ]
   },
   "devDependencies": {

@@ -51,30 +51,28 @@ const Button = ({
   padding,
   disabled,
   onClick,
-}: ButtonProps) => {
-  return (
-    <StyledButton
-      text={text}
-      backgroundColor={backgroundColor}
-      hoverColor={hoverColor}
-      format={format}
-      borderRadius={borderRadius}
-      size={size}
-      padding={padding}
-      disabled={disabled}
-      onClick={onClick}
+}: ButtonProps) => (
+  <StyledButton
+    text={text}
+    backgroundColor={backgroundColor}
+    hoverColor={hoverColor}
+    format={format}
+    borderRadius={borderRadius}
+    size={size}
+    padding={padding}
+    disabled={disabled}
+    onClick={onClick}
+  >
+    <Text
+      color={textColor}
+      weight={textWeight}
+      fontWeight={textFontWeight}
+      fontSize={textFontSize}
+      fontFamily={textFontFamily}
     >
-      <Text
-        color={textColor}
-        weight={textWeight}
-        fontWeight={textFontWeight}
-        fontSize={textFontSize}
-        fontFamily={textFontFamily}
-      >
-        {text}
-      </Text>
-    </StyledButton>
-  );
-};
+      {text}
+    </Text>
+  </StyledButton>
+);
 
 export default Button;
