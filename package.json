@@ -1,6 +1,6 @@
 {
   "name": "rjs-components",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -19,7 +19,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "format": "prettier --write \"**/src/components/**/**/*.[jt]s?(x)\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "create-base-component": "hygen baseComponent new"
   },
   "lint-staged": {
     "src/components/base/**/*.tsx": [
@@ -49,6 +50,7 @@
     "@types/styled-components": "^5.1.26",
     "chromatic": "^6.19.9",
     "husky": "^8.0.3",
+    "hygen": "^6.2.11",
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^29.6.1",
     "jest-styled-components": "^7.1.1",

@@ -1,3 +1,10 @@
+## 0.7.3
+
+_Fev. 19, 2024_
+
+- add hygen lib
+- define base components templates
+
 ## 0.7.2
 
 _Fev. 08, 2024_
@@ -86,7 +93,7 @@ _Jul. 13, 2023_
 
 _Jul. 06, 2023_
 
-- add husky package
+- add husky lib
 
 ## 0.3.1
 
