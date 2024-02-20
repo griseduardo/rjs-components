@@ -1,3 +1,9 @@
+## 0.7.4
+
+_Fev. 20, 2024_
+
+- define template to inject base component export and doc reference
+
 ## 0.7.3
 
 _Fev. 19, 2024_

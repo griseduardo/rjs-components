@@ -34,7 +34,7 @@ import { Button } from "rjs-components"
 |-----------|-------------------------------------|
 | Button    | [Button](docs/base/button.md)       |
 | Div       | [Div](docs/base/div.md)             |
-| IconTag   | [IconTag](docs/base/icontag.md)    |
+| IconTag   | [IconTag](docs/base/icontag.md)     |
 | Img       | [Img](docs/base/img.md)             |
 | Paragraph | [Paragraph](docs/base/paragraph.md) |
 | Tag       | [Tag](docs/base/tag.md)             |
