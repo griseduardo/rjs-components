@@ -10,6 +10,7 @@ export interface DivProps {
   alignContent?: string;
   alignItems?: string;
   justifyContent?: string;
+  gap?: string;
 }
 
 export const StyledDiv = styled.div<DivProps>`
@@ -24,6 +25,7 @@ export const StyledDiv = styled.div<DivProps>`
   ${(props) => props.alignItems && `align-items: ${props.alignItems}`};
   ${(props) =>
     props.justifyContent && `justify-content: ${props.justifyContent}`};
+  ${(props) => props.gap && `gap: ${props.gap}`};
 `;
 
 const Div = ({
@@ -35,6 +37,7 @@ const Div = ({
   alignContent,
   alignItems,
   justifyContent,
+  gap,
 }: DivProps) => (
   <StyledDiv
     margin={margin}
@@ -44,6 +47,7 @@ const Div = ({
     alignContent={alignContent}
     alignItems={alignItems}
     justifyContent={justifyContent}
+    gap={gap}
   >
     {children}
   </StyledDiv>

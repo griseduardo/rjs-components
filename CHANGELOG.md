@@ -1,3 +1,9 @@
+## 0.7.5
+
+_May. 02, 2024_
+
+- update storybook layout
+
 ## 0.7.4
 
 _Fev. 20, 2024_

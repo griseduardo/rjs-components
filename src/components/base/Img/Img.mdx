@@ -1,0 +1,56 @@
+import { ArgTypes, Canvas, Meta, Story } from '@storybook/blocks';
+import * as Stories from './Img.stories';
+
+<Meta of={Stories} />
+
+# Img
+
+Img base component.
+
+## Props
+
+<ArgTypes />
+
+## Predefined properties
+
+### Format
+
+There are three format predefined properties: default, semiRounded and rounded.
+
+<Canvas withToolbar>
+  <Story of={Stories.PredefinedFormat} />
+</Canvas>
+
+## Custom properties
+
+### Height
+
+Img height can be modified.
+
+<Canvas withToolbar>
+  <Story of={Stories.Height} />
+</Canvas>
+
+### Width
+
+Img width can be modified.
+
+<Canvas withToolbar>
+  <Story of={Stories.Width} />
+</Canvas>
+
+### Height and Width
+
+Img height and width can be modified.
+
+<Canvas withToolbar>
+  <Story of={Stories.HeightAndWidth} />
+</Canvas>
+
+### Format
+
+Img format can be modified.
+
+<Canvas withToolbar>
+  <Story of={Stories.CustomFormat} />
+</Canvas>

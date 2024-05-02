@@ -1,0 +1,64 @@
+import { ArgTypes, Canvas, Meta, Story } from '@storybook/blocks';
+import * as Stories from './Button.stories';
+
+<Meta of={Stories} />
+
+# Button
+
+Button base component.
+
+## Props
+
+<ArgTypes />
+
+## Predefined properties
+
+### Format
+
+There are three format predefined properties: default, semiRounded and rounded.
+
+<Canvas withToolbar>
+  <Story of={Stories.PredefinedFormat} />
+</Canvas>
+
+### Size
+
+There are three size predefined properties: small, medium and large.
+
+<Canvas withToolbar>
+  <Story of={Stories.PredefinedSize} />
+</Canvas>
+
+## Custom properties
+
+### Color
+
+Button color can be modified.
+
+<Canvas withToolbar>
+  <Story of={Stories.Color} />
+</Canvas>
+
+### Format
+
+Button format can be modified.
+
+<Canvas withToolbar>
+  <Story of={Stories.CustomFormat} />
+</Canvas>
+
+### Size
+
+Button size can be modified.
+
+<Canvas withToolbar>
+  <Story of={Stories.CustomSize} />
+</Canvas>
+
+### Text property
+
+Button text property can be modified.
+
+<Canvas withToolbar>
+  <Story of={Stories.TextProperty} />
+</Canvas>
