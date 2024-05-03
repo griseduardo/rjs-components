@@ -31,7 +31,7 @@ export const StyledTag = styled.div<CommonTagProps>`
       ? "30px"
       : props.format === "semiRounded"
       ? "5px"
-      : "0px"};
+      : "0"};
   width: fit-content;
 `;
 

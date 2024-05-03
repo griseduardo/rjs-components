@@ -1,3 +1,9 @@
+## 0.7.6
+
+_May. 03, 2024_
+
+- update base components generator
+
 ## 0.7.5
 
 _May. 02, 2024_

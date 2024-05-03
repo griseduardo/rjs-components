@@ -74,7 +74,7 @@ export const CustomFormat: Story = (args) => (
 
 CustomFormat.args = {
   text: "Tag",
-  borderRadius: "0px",
+  borderRadius: "0",
 };
 
 export const CustomSize: Story = (args) => (
