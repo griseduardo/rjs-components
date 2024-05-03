@@ -13,7 +13,7 @@ describe("<Tag />", () => {
 
     expect(element).toBeInTheDocument();
     expect(element).toHaveStyleRule("background-color", "#d3d3d3");
-    expect(element).toHaveStyleRule("border-radius", "0px");
+    expect(element).toHaveStyleRule("border-radius", "0");
     expect(element).toHaveStyleRule("padding", "7px");
     expect(within(element).getByText("Tag")).toHaveStyleRule("color", "#fff");
   });
