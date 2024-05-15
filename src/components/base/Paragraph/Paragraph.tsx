@@ -9,8 +9,8 @@ export const StyledParagraph = styled.p<CommonTextProps>`
     props.fontWeight
       ? props.fontWeight
       : props.weight
-      ? props.weight
-      : "normal"};
+        ? props.weight
+        : "normal"};
   font-family: ${(props) => (props.fontFamily ? props.fontFamily : "Arial")};
 `;
 

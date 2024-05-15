@@ -9,29 +9,29 @@ export const StyledTag = styled.div<CommonTagProps>`
     props.padding
       ? props.padding
       : props.size === "large"
-      ? "15px 20px"
-      : props.size === "medium"
-      ? "10px 12px"
-      : "7px"};
+        ? "15px 20px"
+        : props.size === "medium"
+          ? "10px 12px"
+          : "7px"};
   background-color: ${(props) =>
     props.backgroundColor
       ? props.backgroundColor
       : props.type === "error"
-      ? "#e97451"
-      : props.type === "alert"
-      ? "#f8de7e"
-      : props.type === "success"
-      ? "#50c878"
-      : "#d3d3d3"};
+        ? "#e97451"
+        : props.type === "alert"
+          ? "#f8de7e"
+          : props.type === "success"
+            ? "#50c878"
+            : "#d3d3d3"};
   pointer-events: none;
   border-radius: ${(props) =>
     props.borderRadius
       ? props.borderRadius
       : props.format === "rounded"
-      ? "30px"
-      : props.format === "semiRounded"
-      ? "5px"
-      : "0"};
+        ? "30px"
+        : props.format === "semiRounded"
+          ? "5px"
+          : "0"};
   width: fit-content;
 `;
 

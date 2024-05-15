@@ -17,10 +17,10 @@ export const StyledImg = styled.img<ImgProps>`
     props.borderRadius
       ? props.borderRadius
       : props.format === "rounded"
-      ? "30px"
-      : props.format === "semiRounded"
-      ? "5px"
-      : "0px"};
+        ? "30px"
+        : props.format === "semiRounded"
+          ? "5px"
+          : "0px"};
 `;
 
 const Img = ({ src, alt, height, width, format, borderRadius }: ImgProps) => (

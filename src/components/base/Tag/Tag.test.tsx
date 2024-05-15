@@ -50,7 +50,7 @@ describe("<Tag />", () => {
 
     expect(screen.getByTestId("tag")).toHaveStyleRule(
       "background-color",
-      "#fff"
+      "#fff",
     );
   });
 
@@ -105,7 +105,7 @@ describe("<Tag />", () => {
 
     expect(within(element).getByText("Tag")).toHaveStyleRule(
       "font-weight",
-      "bold"
+      "bold",
     );
   });
 
@@ -116,7 +116,7 @@ describe("<Tag />", () => {
 
     expect(within(element).getByText("Tag")).toHaveStyleRule(
       "font-weight",
-      "200"
+      "200",
     );
   });
 
@@ -127,7 +127,7 @@ describe("<Tag />", () => {
 
     expect(within(element).getByText("Tag")).toHaveStyleRule(
       "font-size",
-      "30px"
+      "30px",
     );
   });
 
@@ -138,7 +138,7 @@ describe("<Tag />", () => {
 
     expect(within(element).getByText("Tag")).toHaveStyleRule(
       "font-family",
-      "Times New Roman"
+      "Times New Roman",
     );
   });
 });

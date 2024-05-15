@@ -28,7 +28,7 @@ describe("<Paragraph />", () => {
 
     expect(screen.getByText("Paragraph")).toHaveStyleRule(
       "font-weight",
-      "bold"
+      "bold",
     );
   });
 
@@ -49,7 +49,7 @@ describe("<Paragraph />", () => {
 
     expect(screen.getByText("Paragraph")).toHaveStyleRule(
       "font-family",
-      "TimesNewRoman"
+      "TimesNewRoman",
     );
   });
 });

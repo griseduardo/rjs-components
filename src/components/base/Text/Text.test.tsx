@@ -46,7 +46,7 @@ describe("<Text />", () => {
 
     expect(screen.getByText("Text")).toHaveStyleRule(
       "font-family",
-      "TimesNewRoman"
+      "TimesNewRoman",
     );
   });
 });

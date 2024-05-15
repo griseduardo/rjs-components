@@ -17,7 +17,7 @@ describe("<IconTag />", () => {
     expect(iconTagElement).toHaveStyleRule("padding", "7px");
     expect(within(iconTagElement).getByText("IconTag")).toHaveStyleRule(
       "color",
-      "#fff"
+      "#fff",
     );
     expect(imageElement).toHaveStyleRule("padding", "0 7px 0 0");
     expect(imageElement).toHaveStyleRule("height", "30px");
@@ -32,7 +32,7 @@ describe("<IconTag />", () => {
     expect(element).toHaveStyleRule("background-color", "#50c878");
     expect(within(element).getByText("IconTag")).toHaveStyleRule(
       "color",
-      "#fff"
+      "#fff",
     );
   });
 
@@ -44,7 +44,7 @@ describe("<IconTag />", () => {
     expect(element).toHaveStyleRule("background-color", "#f8de7e");
     expect(within(element).getByText("IconTag")).toHaveStyleRule(
       "color",
-      "#fff"
+      "#fff",
     );
   });
 
@@ -56,7 +56,7 @@ describe("<IconTag />", () => {
     expect(element).toHaveStyleRule("background-color", "#e97451");
     expect(within(element).getByText("IconTag")).toHaveStyleRule(
       "color",
-      "#fff"
+      "#fff",
     );
   });
 
@@ -65,7 +65,7 @@ describe("<IconTag />", () => {
 
     expect(screen.getByTestId("tag")).toHaveStyleRule(
       "background-color",
-      "#fff"
+      "#fff",
     );
   });
 
@@ -112,7 +112,7 @@ describe("<IconTag />", () => {
 
     expect(within(element).getByText("IconTag")).toHaveStyleRule(
       "color",
-      "#000"
+      "#000",
     );
   });
 
@@ -123,7 +123,7 @@ describe("<IconTag />", () => {
 
     expect(within(element).getByText("IconTag")).toHaveStyleRule(
       "font-weight",
-      "bold"
+      "bold",
     );
   });
 
@@ -134,7 +134,7 @@ describe("<IconTag />", () => {
 
     expect(within(element).getByText("IconTag")).toHaveStyleRule(
       "font-weight",
-      "200"
+      "200",
     );
   });
 
@@ -145,20 +145,20 @@ describe("<IconTag />", () => {
 
     expect(within(element).getByText("IconTag")).toHaveStyleRule(
       "font-size",
-      "30px"
+      "30px",
     );
   });
 
   it("should render component with custom text font family", () => {
     render(
-      <IconTag src="image" text="IconTag" textFontFamily="Times New Roman" />
+      <IconTag src="image" text="IconTag" textFontFamily="Times New Roman" />,
     );
 
     const element = screen.getByTestId("tag");
 
     expect(within(element).getByText("IconTag")).toHaveStyleRule(
       "font-family",
-      "Times New Roman"
+      "Times New Roman",
     );
   });
 
@@ -182,7 +182,7 @@ describe("<IconTag />", () => {
 
   it("should render component with custom image height and width", () => {
     render(
-      <IconTag src="image" text="IconTag" iconHeight="20px" iconWidth="20px" />
+      <IconTag src="image" text="IconTag" iconHeight="20px" iconWidth="20px" />,
     );
 
     const element = screen.getByTestId("tag").childNodes[0];
@@ -196,7 +196,7 @@ describe("<IconTag />", () => {
 
     expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
       "border-radius",
-      "5px"
+      "5px",
     );
   });
 
@@ -205,7 +205,7 @@ describe("<IconTag />", () => {
 
     expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
       "border-radius",
-      "30px"
+      "30px",
     );
   });
 
@@ -214,7 +214,7 @@ describe("<IconTag />", () => {
 
     expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
       "border-radius",
-      "20px"
+      "20px",
     );
   });
 });

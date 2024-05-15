@@ -9,8 +9,8 @@ export const StyledText = styled.span<CommonTextProps>`
     props.fontWeight
       ? props.fontWeight
       : props.weight
-      ? props.weight
-      : "normal"};
+        ? props.weight
+        : "normal"};
   font-family: ${(props) => (props.fontFamily ? props.fontFamily : "Arial")};
 `;
 

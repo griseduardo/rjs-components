@@ -16,10 +16,10 @@ export const StyledButton = styled.button<ButtonProps>`
     props.padding
       ? props.padding
       : props.size === "large"
-      ? "15px 20px"
-      : props.size === "medium"
-      ? "10px 12px"
-      : "7px"};
+        ? "15px 20px"
+        : props.size === "medium"
+          ? "10px 12px"
+          : "7px"};
   background-color: ${(props) => props.backgroundColor || `#d3d3d3`};
   pointer-events: ${(props) => (props.disabled ? `none` : `auto`)};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
@@ -27,10 +27,10 @@ export const StyledButton = styled.button<ButtonProps>`
     props.borderRadius
       ? props.borderRadius
       : props.format === "rounded"
-      ? "30px"
-      : props.format === "semiRounded"
-      ? "5px"
-      : "0px"};
+        ? "30px"
+        : props.format === "semiRounded"
+          ? "5px"
+          : "0px"};
   &:hover {
     background-color: ${(props) => props.hoverColor || "#a9a9a9"};
   }

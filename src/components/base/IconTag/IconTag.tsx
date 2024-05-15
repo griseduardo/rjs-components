@@ -33,29 +33,29 @@ export const StyledTag = styled.div<IconTagProps>`
     props.padding
       ? props.padding
       : props.size === "large"
-      ? "15px 20px"
-      : props.size === "medium"
-      ? "10px 12px"
-      : "7px"};
+        ? "15px 20px"
+        : props.size === "medium"
+          ? "10px 12px"
+          : "7px"};
   background-color: ${(props) =>
     props.backgroundColor
       ? props.backgroundColor
       : props.type === "error"
-      ? "#e97451"
-      : props.type === "alert"
-      ? "#f8de7e"
-      : props.type === "success"
-      ? "#50c878"
-      : "#d3d3d3"};
+        ? "#e97451"
+        : props.type === "alert"
+          ? "#f8de7e"
+          : props.type === "success"
+            ? "#50c878"
+            : "#d3d3d3"};
   pointer-events: none;
   border-radius: ${(props) =>
     props.borderRadius
       ? props.borderRadius
       : props.format === "rounded"
-      ? "30px"
-      : props.format === "semiRounded"
-      ? "5px"
-      : "0px"};
+        ? "30px"
+        : props.format === "semiRounded"
+          ? "5px"
+          : "0px"};
   width: fit-content;
 `;
 
@@ -125,10 +125,10 @@ const IconTag = ({
           spacing
             ? `0 ${spacing} 0 0`
             : size === "large"
-            ? "0 20px 0 0"
-            : size === "medium"
-            ? "0 12px 0 0"
-            : "0 7px 0 0"
+              ? "0 20px 0 0"
+              : size === "medium"
+                ? "0 12px 0 0"
+                : "0 7px 0 0"
         }
         iconHeight={iconHeight}
         iconWidth={iconWidth}
@@ -155,10 +155,10 @@ const IconTag = ({
           spacing
             ? `0 0 0 ${spacing}`
             : size === "large"
-            ? "0 0 0 20px"
-            : size === "medium"
-            ? "0 0 0 12px"
-            : "0 0 0 7px"
+              ? "0 0 0 20px"
+              : size === "medium"
+                ? "0 0 0 12px"
+                : "0 0 0 7px"
         }
         iconHeight={iconHeight}
         iconWidth={iconWidth}

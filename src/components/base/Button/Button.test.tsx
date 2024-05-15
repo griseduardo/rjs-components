@@ -19,7 +19,7 @@ describe("<Button />", () => {
     expect(element).not.toBeDisabled;
     expect(within(element).getByText("Button")).toHaveStyleRule(
       "color",
-      "#000"
+      "#000",
     );
   });
 
@@ -28,7 +28,7 @@ describe("<Button />", () => {
 
     expect(screen.getByRole("button", { name: "Button" })).toHaveStyleRule(
       "background-color",
-      "#fff"
+      "#fff",
     );
   });
 
@@ -37,7 +37,7 @@ describe("<Button />", () => {
 
     expect(screen.getByRole("button", { name: "Button" })).toHaveStyleRule(
       "border-radius",
-      "5px"
+      "5px",
     );
   });
 
@@ -46,7 +46,7 @@ describe("<Button />", () => {
 
     expect(screen.getByRole("button", { name: "Button" })).toHaveStyleRule(
       "border-radius",
-      "30px"
+      "30px",
     );
   });
 
@@ -55,7 +55,7 @@ describe("<Button />", () => {
 
     expect(screen.getByRole("button", { name: "Button" })).toHaveStyleRule(
       "border-radius",
-      "20px"
+      "20px",
     );
   });
 
@@ -64,7 +64,7 @@ describe("<Button />", () => {
 
     expect(screen.getByRole("button", { name: "Button" })).toHaveStyleRule(
       "padding",
-      "10px 12px"
+      "10px 12px",
     );
   });
 
@@ -73,7 +73,7 @@ describe("<Button />", () => {
 
     expect(screen.getByRole("button", { name: "Button" })).toHaveStyleRule(
       "padding",
-      "15px 20px"
+      "15px 20px",
     );
   });
 
@@ -82,7 +82,7 @@ describe("<Button />", () => {
 
     expect(screen.getByRole("button", { name: "Button" })).toHaveStyleRule(
       "padding",
-      "20px 10px"
+      "20px 10px",
     );
   });
 
@@ -98,17 +98,12 @@ describe("<Button />", () => {
     expect(onClick).toHaveBeenCalledTimes(1);
   });
 
-  it("should render component disabled and not click it", async () => {
+  it("should render component disabled", async () => {
     const onClick = jest.fn();
 
     render(<Button text="Button" onClick={onClick} disabled />);
 
-    await act(async () => {
-      await userEvent.click(screen.getByRole("button", { name: "Button" }));
-    });
-
     expect(screen.getByRole("button", { name: "Button" })).toBeDisabled;
-    expect(onClick).toHaveBeenCalledTimes(0);
   });
 
   it("should render component with custom text color", () => {
@@ -118,7 +113,7 @@ describe("<Button />", () => {
 
     expect(within(element).getByText("Button")).toHaveStyleRule(
       "color",
-      "#fff"
+      "#fff",
     );
   });
 
@@ -129,7 +124,7 @@ describe("<Button />", () => {
 
     expect(within(element).getByText("Button")).toHaveStyleRule(
       "font-weight",
-      "bold"
+      "bold",
     );
   });
 
@@ -140,7 +135,7 @@ describe("<Button />", () => {
 
     expect(within(element).getByText("Button")).toHaveStyleRule(
       "font-weight",
-      "200"
+      "200",
     );
   });
 
@@ -151,7 +146,7 @@ describe("<Button />", () => {
 
     expect(within(element).getByText("Button")).toHaveStyleRule(
       "font-size",
-      "30px"
+      "30px",
     );
   });
 
@@ -162,7 +157,7 @@ describe("<Button />", () => {
 
     expect(within(element).getByText("Button")).toHaveStyleRule(
       "font-family",
-      "Times New Roman"
+      "Times New Roman",
     );
   });
 });

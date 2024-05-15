@@ -54,7 +54,7 @@ describe("<Img />", () => {
 
     expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
       "border-radius",
-      "5px"
+      "5px",
     );
   });
 
@@ -63,7 +63,7 @@ describe("<Img />", () => {
 
     expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
       "border-radius",
-      "30px"
+      "30px",
     );
   });
 
@@ -72,7 +72,7 @@ describe("<Img />", () => {
 
     expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
       "border-radius",
-      "20px"
+      "20px",
     );
   });
 });

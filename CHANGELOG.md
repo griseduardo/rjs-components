@@ -1,3 +1,11 @@
+## 0.7.7
+
+_May. 15, 2024_
+
+- add eslint
+- use eslint with prettier
+- update lint-staged to use eslint fix
+
 ## 0.7.6
 
 _May. 03, 2024_
