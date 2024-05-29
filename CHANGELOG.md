@@ -1,3 +1,9 @@
+## 0.7.9
+
+_May. 29, 2024_
+
+- update eslint with typescript
+
 ## 0.7.8
 
 _May. 29, 2024_

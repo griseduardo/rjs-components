@@ -6,6 +6,7 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
   "parser": "@babel/eslint-parser",
@@ -16,7 +17,8 @@
   "plugins": [
     "prettier",
     "react",
-    "react-hooks"
+    "react-hooks",
+    "@typescript-eslint"
   ],
   "settings": {
     "react": {
@@ -25,7 +27,6 @@
   },
   "ignorePatterns": ["*.stories.tsx"],
   "rules": {
-    "no-undef": "off",
     "prettier/prettier": ["error"]
   }
 }

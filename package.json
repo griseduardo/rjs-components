@@ -1,6 +1,6 @@
 {
   "name": "rjs-components",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -19,8 +19,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "format": "prettier --write \"**/src/components/**/**/*.[jt]s?(x)\"",
-    "lint-src": "eslint --ext=ts,tsx src",
-    "lint-fix": "eslint --ext=ts,tsx --fix",
+    "lint-src": "eslint src",
+    "lint-fix": "eslint --fix",
     "prepare": "husky install",
     "create-base-component": "hygen baseComponent new"
   },
@@ -51,6 +51,7 @@
     "@types/jest": "^29.5.3",
     "@types/react": "^18.2.14",
     "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
     "chromatic": "^6.19.9",
     "eslint": "8.57.0",
     "eslint-config-prettier": "^9.1.0",
