@@ -1,7 +1,11 @@
 {
+  "env": {
+    "jest": true
+  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "prettier"
   ],
   "parser": "@babel/eslint-parser",
@@ -11,7 +15,8 @@
   },
   "plugins": [
     "prettier",
-    "react"
+    "react",
+    "react-hooks"
   ],
   "settings": {
     "react": {
@@ -21,11 +26,6 @@
   "ignorePatterns": ["*.stories.tsx"],
   "rules": {
     "no-undef": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        "doubleQuote": true
-      }
-    ]
+    "prettier/prettier": ["error"]
   }
 }
