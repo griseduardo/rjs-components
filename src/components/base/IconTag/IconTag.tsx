@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Text from "../Text/Text";
 import Img from "../Img";
 import Div from "../Div";
-import { CommonTagProps } from "../Common.types";
+import { CommonTagProps, StyledCommonTagProps } from "../Common.types";
 
 export interface IconProps {
   padding?: string;
@@ -25,35 +25,35 @@ export interface IconTagProps extends CommonTagProps {
   spacing?: string;
 }
 
-export const StyledTag = styled.div<IconTagProps>`
+export const StyledTag = styled.div<StyledCommonTagProps>`
   border: none;
   display: flex;
   align-items: center;
   padding: ${(props) =>
-    props.padding
-      ? props.padding
-      : props.size === "large"
+    props.$padding
+      ? props.$padding
+      : props.$size === "large"
         ? "15px 20px"
-        : props.size === "medium"
+        : props.$size === "medium"
           ? "10px 12px"
           : "7px"};
   background-color: ${(props) =>
-    props.backgroundColor
-      ? props.backgroundColor
-      : props.type === "error"
+    props.$backgroundColor
+      ? props.$backgroundColor
+      : props.$type === "error"
         ? "#e97451"
-        : props.type === "alert"
+        : props.$type === "alert"
           ? "#f8de7e"
-          : props.type === "success"
+          : props.$type === "success"
             ? "#50c878"
             : "#d3d3d3"};
   pointer-events: none;
   border-radius: ${(props) =>
-    props.borderRadius
-      ? props.borderRadius
-      : props.format === "rounded"
+    props.$borderRadius
+      ? props.$borderRadius
+      : props.$format === "rounded"
         ? "30px"
-        : props.format === "semiRounded"
+        : props.$format === "semiRounded"
           ? "5px"
           : "0px"};
   width: fit-content;
@@ -107,17 +107,12 @@ const IconTag = ({
 }: IconTagProps) => (
   <StyledTag
     data-testid="tag"
-    text={text}
-    type={type}
-    backgroundColor={backgroundColor}
-    format={format}
-    borderRadius={borderRadius}
-    size={size}
-    padding={padding}
-    src={src}
-    spacing={spacing}
-    iconHeight={iconHeight}
-    iconWidth={iconWidth}
+    $type={type}
+    $backgroundColor={backgroundColor}
+    $format={format}
+    $borderRadius={borderRadius}
+    $size={size}
+    $padding={padding}
   >
     {iconPlacement != "right" && (
       <Icon

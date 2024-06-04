@@ -1,3 +1,10 @@
+## 0.7.10
+
+_Jun. 04, 2024_
+
+- add styled components types
+- update styled component props
+
 ## 0.7.9
 
 _May. 29, 2024_
