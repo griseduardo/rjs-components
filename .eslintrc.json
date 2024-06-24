@@ -28,6 +28,13 @@
   "ignorePatterns": ["*.stories.tsx"],
   "rules": {
     "prettier/prettier": ["error"],
+    "no-console": "warn",
+    "no-duplicate-imports": "error",
+    "eqeqeq": "error",
+    "react/destructuring-assignment": "error",
+    "react/no-array-index-key": "error",
+    "react/jsx-no-useless-fragment": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "@typescript-eslint/no-unused-vars": "off"
   }
 }

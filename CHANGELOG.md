@@ -1,3 +1,9 @@
+## 0.7.11
+
+_Jun. 24, 2024_
+
+- add custom react eslint rules
+
 ## 0.7.10
 
 _Jun. 04, 2024_

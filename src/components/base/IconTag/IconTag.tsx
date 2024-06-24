@@ -114,7 +114,7 @@ const IconTag = ({
     $size={size}
     $padding={padding}
   >
-    {iconPlacement != "right" && (
+    {iconPlacement !== "right" && (
       <Icon
         padding={
           spacing
