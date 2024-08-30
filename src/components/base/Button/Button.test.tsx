@@ -14,7 +14,7 @@ describe("<Button />", () => {
 
     expect(element).toBeInTheDocument();
     expect(element).toHaveStyleRule("background-color", "#d3d3d3");
-    expect(element).toHaveStyleRule("border-radius", "0px");
+    expect(element).toHaveStyleRule("border-radius", "0");
     expect(element).toHaveStyleRule("padding", "7px");
     expect(element).not.toBeDisabled;
     expect(within(element).getByText("Button")).toHaveStyleRule(

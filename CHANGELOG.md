@@ -1,3 +1,13 @@
+## 0.8.0
+
+_Ago. 30, 2024_
+
+- add IconButton base component
+
+**Breaking change**
+
+- IconTag format props does not change icon format too anymore, only Tag format
+
 ## 0.7.11
 
 _Jun. 24, 2024_

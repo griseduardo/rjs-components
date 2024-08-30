@@ -1,5 +1,6 @@
 import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
+
 import Text from "../Text/Text";
 import {
   CommonButtonTagProps,
@@ -38,7 +39,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
         ? "30px"
         : props.$format === "semiRounded"
           ? "5px"
-          : "0px"};
+          : "0"};
   &:hover {
     background-color: ${(props) => props.$hoverColor || "#a9a9a9"};
   }

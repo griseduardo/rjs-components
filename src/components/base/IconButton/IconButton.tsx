@@ -1,11 +1,18 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
-import Text from "../Text/Text";
-import Icon from "../Icon";
-import Div from "../Div";
-import { CommonTagProps, StyledCommonTagProps } from "../Common.types";
 
-export interface IconTagProps extends CommonTagProps {
+import Icon from "../Icon";
+import Text from "../Text/Text";
+import Div from "../Div";
+import {
+  CommonButtonTagProps,
+  StyledCommonButtonTagProps,
+} from "../Common.types";
+
+export interface IconButtonProps extends CommonButtonTagProps {
+  hoverColor?: string;
+  disabled?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   src: string;
   iconFormat?: "default" | "semiRounded" | "rounded";
   iconBorderRadius?: string;
@@ -15,10 +22,16 @@ export interface IconTagProps extends CommonTagProps {
   spacing?: string;
 }
 
-export const StyledTag = styled.div<StyledCommonTagProps>`
+export interface StyledIconButtonProps extends StyledCommonButtonTagProps {
+  $hoverColor?: string;
+  $disabled?: boolean;
+}
+
+export const StyledIconButton = styled.button<StyledIconButtonProps>`
   border: none;
   display: flex;
   align-items: center;
+  cursor: pointer;
   padding: ${(props) =>
     props.$padding
       ? props.$padding
@@ -27,17 +40,9 @@ export const StyledTag = styled.div<StyledCommonTagProps>`
         : props.$size === "medium"
           ? "10px 12px"
           : "7px"};
-  background-color: ${(props) =>
-    props.$backgroundColor
-      ? props.$backgroundColor
-      : props.$type === "error"
-        ? "#e97451"
-        : props.$type === "alert"
-          ? "#f8de7e"
-          : props.$type === "success"
-            ? "#50c878"
-            : "#d3d3d3"};
-  pointer-events: none;
+  background-color: ${(props) => props.$backgroundColor || `#d3d3d3`};
+  pointer-events: ${(props) => (props.$disabled ? `none` : `auto`)};
+  opacity: ${(props) => (props.$disabled ? 0.5 : 1)};
   border-radius: ${(props) =>
     props.$borderRadius
       ? props.$borderRadius
@@ -46,22 +51,26 @@ export const StyledTag = styled.div<StyledCommonTagProps>`
         : props.$format === "semiRounded"
           ? "5px"
           : "0"};
-  width: fit-content;
+  &:hover {
+    background-color: ${(props) => props.$hoverColor || "#a9a9a9"};
+  }
 `;
 
-const IconTag = ({
+const IconButton = ({
   text,
-  type,
   textColor,
   textWeight,
   textFontWeight,
   textFontSize,
   textFontFamily,
   backgroundColor,
+  hoverColor,
   format,
   borderRadius,
   size,
   padding,
+  disabled,
+  onClick,
   src,
   spacing,
   iconPlacement,
@@ -69,15 +78,16 @@ const IconTag = ({
   iconBorderRadius,
   iconHeight,
   iconWidth,
-}: IconTagProps) => (
-  <StyledTag
-    data-testid="tag"
-    $type={type}
+}: IconButtonProps) => (
+  <StyledIconButton
     $backgroundColor={backgroundColor}
+    $hoverColor={hoverColor}
     $format={format}
     $borderRadius={borderRadius}
     $size={size}
     $padding={padding}
+    $disabled={disabled}
+    onClick={onClick}
   >
     {iconPlacement !== "right" && (
       <Icon
@@ -99,7 +109,7 @@ const IconTag = ({
     )}
     <Div>
       <Text
-        color={textColor || "#fff"}
+        color={textColor}
         weight={textWeight}
         fontWeight={textFontWeight}
         fontSize={textFontSize}
@@ -126,7 +136,7 @@ const IconTag = ({
         iconBorderRadius={iconBorderRadius}
       />
     )}
-  </StyledTag>
+  </StyledIconButton>
 );
 
-export default IconTag;
+export default IconButton;
