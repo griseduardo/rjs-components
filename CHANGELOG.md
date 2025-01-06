@@ -1,3 +1,19 @@
+## 0.8.1
+
+_Jan. 06, 2025_
+
+- update node to 18.20.5
+- update jest to 29.7.0 and dependencies versions
+- update @testing-library/react to 16.1.0 and dependencies versions
+- update styled-components to 6.1.14
+- update typescript to 5.7.2 and dependencies versions
+- update husky to 9.1.7
+- update lint-staged to 15.3.0
+- update prettier to 3.4.2
+- add @testing-library/dom
+- remove @types/styled-components
+- remove prop-types
+
 ## 0.8.0
 
 _Ago. 30, 2024_
