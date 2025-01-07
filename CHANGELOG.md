@@ -1,3 +1,9 @@
+## 0.8.2
+
+_Jan. 07, 2025_
+
+- add @babel/core and update dependencies versions
+
 ## 0.8.1
 
 _Jan. 06, 2025_
