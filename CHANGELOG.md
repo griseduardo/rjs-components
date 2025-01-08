@@ -1,3 +1,12 @@
+## 0.8.3
+
+_Jan. 08, 2025_
+
+- update rollup to 4.30.1 and update dependencies versions
+- add styled-components to peer-dependencies
+- add @rollup/plugin-terser
+- remove rollup-plugin-terser
+
 ## 0.8.2
 
 _Jan. 07, 2025_
