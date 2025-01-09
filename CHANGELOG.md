@@ -1,3 +1,15 @@
+## 0.8.4
+
+_Jan. 09, 2025_
+
+- update eslint to 9.17.0 and update dependencies versions
+- add @eslint/compat
+- add @eslint/eslintrc
+- add @eslint/js
+- add @typescript-eslint/parser
+- add globals
+- update eslint config file from json to mjs
+
 ## 0.8.3
 
 _Jan. 08, 2025_
