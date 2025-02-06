@@ -1,3 +1,16 @@
+## 0.8.5
+
+_Fev. 06, 2025_
+
+- update eslint to typescript-eslint
+- add typescript-eslint
+- remove @eslint/compat
+- remove @eslint/eslintrc
+- remove @typescript-eslint/eslint-plugin
+- remove @typescript-eslint/parser
+- remove eslint-plugin-react-hooks
+- remove globals
+
 ## 0.8.4
 
 _Jan. 09, 2025_
