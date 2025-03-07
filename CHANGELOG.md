@@ -1,3 +1,11 @@
+## 0.8.6
+
+_Mar. 07, 2025_
+
+- add @types/react-dom
+- update @testing-library/react version
+- update @types/react version
+
 ## 0.8.5
 
 _Fev. 06, 2025_
