@@ -98,7 +98,7 @@ describe("<Button />", () => {
     expect(onClick).toHaveBeenCalledTimes(1);
   });
 
-  it("should render component disabled", async () => {
+  it("should render component disabled", () => {
     const onClick = jest.fn();
 
     render(<Button text="Button" onClick={onClick} disabled />);

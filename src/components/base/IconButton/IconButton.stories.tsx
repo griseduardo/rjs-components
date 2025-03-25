@@ -72,7 +72,12 @@ export const Color: Story = (args) => (
     <IconButton {...args} />
     <IconButton {...args} disabled />
     <IconButton {...args} backgroundColor="#ee4b2b" hoverColor="#d22b2b" />
-    <IconButton {...args} disabled backgroundColor="#ee4b2b" hoverColor="#d22b2b" />
+    <IconButton
+      {...args}
+      disabled
+      backgroundColor="#ee4b2b"
+      hoverColor="#d22b2b"
+    />
     <IconButton
       {...args}
       backgroundColor="#ee4b2b"

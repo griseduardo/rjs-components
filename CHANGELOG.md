@@ -1,3 +1,11 @@
+## 0.8.7
+
+_Mar. 25, 2025_
+
+- update jest config
+- separate prettier and typescript-eslint
+- adjust pre-commit behavior
+
 ## 0.8.6
 
 _Mar. 07, 2025_
