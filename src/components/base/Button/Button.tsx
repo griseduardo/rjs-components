@@ -8,30 +8,59 @@ import {
 } from "../Common.types";
 
 export interface ButtonProps extends CommonButtonTagProps {
+  type?: "primary" | "secondary";
   hoverColor?: string;
+  focusColor?: string;
+  activeColor?: string;
   disabled?: boolean;
+  disabledOpacity?: number;
+  border?: string;
+  hoverBorder?: string;
+  focusBorder?: string;
+  activeBorder?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 export interface StyledButtonProps extends StyledCommonButtonTagProps {
+  $type?: "primary" | "secondary";
   $hoverColor?: string;
-  $disabled?: boolean;
+  $focusColor?: string;
+  $activeColor?: string;
+  $disabledOpacity?: number;
+  $border?: string;
+  $hoverBorder?: string;
+  $focusBorder?: string;
+  $activeBorder?: string;
 }
 
 export const StyledButton = styled.button<StyledButtonProps>`
-  border: none;
+  border: ${(props) =>
+    props.$border
+      ? props.$border
+      : props.$type === "primary"
+        ? "none"
+        : props.$type === "secondary" && "1px solid #10b981"};
   cursor: pointer;
   padding: ${(props) =>
     props.$padding
       ? props.$padding
       : props.$size === "large"
-        ? "15px 20px"
+        ? props.$type === "primary"
+          ? "19px 16px"
+          : "18px 15px"
         : props.$size === "medium"
-          ? "10px 12px"
-          : "7px"};
-  background-color: ${(props) => props.$backgroundColor || `#d3d3d3`};
-  pointer-events: ${(props) => (props.$disabled ? `none` : `auto`)};
-  opacity: ${(props) => (props.$disabled ? 0.5 : 1)};
+          ? props.$type === "primary"
+            ? "13px"
+            : "12px"
+          : props.$size === "small" && props.$type === "primary"
+            ? "9px"
+            : "8px"};
+  background-color: ${(props) =>
+    props.$backgroundColor
+      ? props.$backgroundColor
+      : props.$type === "primary"
+        ? "#10b981"
+        : props.$type === "secondary" && "#fff"};
   border-radius: ${(props) =>
     props.$borderRadius
       ? props.$borderRadius
@@ -39,48 +68,117 @@ export const StyledButton = styled.button<StyledButtonProps>`
         ? "30px"
         : props.$format === "semiRounded"
           ? "5px"
-          : "0"};
+          : props.$format === "square" && "0"};
   &:hover {
-    background-color: ${(props) => props.$hoverColor || "#a9a9a9"};
+    background-color: ${(props) =>
+      props.$hoverColor
+        ? props.$hoverColor
+        : props.$type === "primary"
+          ? "#0e9774"
+          : props.$type === "secondary" && "#ecfdf5"};
+    border: ${(props) =>
+      props.$hoverBorder
+        ? props.$hoverBorder
+        : props.$type === "secondary" && "1px solid #0e9774"};
+  }
+
+  &:disabled {
+    opacity: ${(props) => props.$disabledOpacity};
+    pointer-events: none;
+  }
+
+  &:focus {
+    background-color: ${(props) =>
+      props.$focusColor
+        ? props.$focusColor
+        : props.$type === "primary"
+          ? "#007a52"
+          : props.$type === "secondary" && "#ecfdf5"};
+    border: ${(props) =>
+      props.$focusBorder
+        ? props.$focusBorder
+        : props.$type === "secondary" && "1px solid #007a52"};
+  }
+
+  &:active {
+    background-color: ${(props) =>
+      props.$activeColor
+        ? props.$activeColor
+        : props.$type === "primary"
+          ? "#0c7a5e"
+          : props.$type === "secondary" && "#dcfce7"};
+    border: ${(props) =>
+      props.$activeBorder
+        ? props.$activeBorder
+        : props.$type === "secondary" && "1px solid #0c7a5e"};
   }
 `;
 
 const Button = ({
-  text,
+  text = "Button",
+  type = "primary",
   textColor,
-  textWeight,
-  textFontWeight,
+  textFontWeight = 600,
   textFontSize,
   textFontFamily,
   backgroundColor,
   hoverColor,
-  format,
+  focusColor,
+  activeColor,
+  format = "semiRounded",
   borderRadius,
-  size,
+  size = "medium",
   padding,
-  disabled,
+  disabled = false,
+  disabledOpacity = 0.5,
+  border,
+  hoverBorder,
+  focusBorder,
+  activeBorder,
   onClick,
-}: ButtonProps) => (
-  <StyledButton
-    $backgroundColor={backgroundColor}
-    $hoverColor={hoverColor}
-    $format={format}
-    $borderRadius={borderRadius}
-    $size={size}
-    $padding={padding}
-    $disabled={disabled}
-    onClick={onClick}
-  >
-    <Text
-      color={textColor}
-      weight={textWeight}
-      fontWeight={textFontWeight}
-      fontSize={textFontSize}
-      fontFamily={textFontFamily}
+}: ButtonProps) => {
+  const fontSize = textFontSize
+    ? textFontSize
+    : size === "large"
+      ? "18px"
+      : size === "small"
+        ? "14px"
+        : "16px";
+  const definedTextColor = textColor
+    ? textColor
+    : type === "primary"
+      ? "#fff"
+      : "#10b981";
+
+  return (
+    <StyledButton
+      $type={type}
+      $backgroundColor={backgroundColor}
+      $hoverColor={hoverColor}
+      $focusColor={focusColor}
+      $activeColor={activeColor}
+      $format={format}
+      $borderRadius={borderRadius}
+      $size={size}
+      $padding={padding}
+      $disabledOpacity={disabledOpacity}
+      $border={border}
+      $hoverBorder={hoverBorder}
+      $focusBorder={focusBorder}
+      $activeBorder={activeBorder}
+      disabled={disabled}
+      onClick={onClick}
     >
-      {text}
-    </Text>
-  </StyledButton>
-);
+      <Text
+        color={definedTextColor}
+        fontWeight={textFontWeight}
+        fontSize={fontSize}
+        fontFamily={textFontFamily}
+      >
+        {text}
+      </Text>
+    </StyledButton>
+  );
+};
 
 export default Button;

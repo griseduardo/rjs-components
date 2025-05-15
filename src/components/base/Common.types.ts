@@ -18,12 +18,11 @@ export interface StyledCommonTextProps {
 export interface CommonButtonTagProps {
   text: string;
   textColor?: string;
-  textWeight?: "normal" | "bold";
   textFontWeight?: number;
   textFontSize?: string;
   textFontFamily?: string;
   backgroundColor?: string;
-  format?: "default" | "semiRounded" | "rounded";
+  format?: "square" | "semiRounded" | "rounded";
   borderRadius?: string;
   size?: "small" | "medium" | "large";
   padding?: string;
@@ -31,12 +30,11 @@ export interface CommonButtonTagProps {
 
 export interface StyledCommonButtonTagProps {
   $textColor?: string;
-  $textWeight?: "normal" | "bold";
   $textFontWeight?: number;
   $textFontSize?: string;
   $textFontFamily?: string;
   $backgroundColor?: string;
-  $format?: "default" | "semiRounded" | "rounded";
+  $format?: "square" | "semiRounded" | "rounded";
   $borderRadius?: string;
   $size?: "small" | "medium" | "large";
   $padding?: string;

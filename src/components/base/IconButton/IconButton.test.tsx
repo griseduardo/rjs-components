@@ -124,17 +124,6 @@ describe("<IconButton />", () => {
     );
   });
 
-  it("should render component with bold text font weight", () => {
-    render(<IconButton src="image" text="IconButton" textWeight="bold" />);
-
-    const element = screen.getByRole("button", { name: "IconButton" });
-
-    expect(within(element).getByText("IconButton")).toHaveStyleRule(
-      "font-weight",
-      "bold",
-    );
-  });
-
   it("should render component with custom text font weight", () => {
     render(<IconButton src="image" text="IconButton" textFontWeight={200} />);
 

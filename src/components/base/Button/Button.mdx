@@ -1,5 +1,5 @@
-import { ArgTypes, Canvas, Meta, Story } from '@storybook/blocks';
-import * as Stories from './Button.stories';
+import { Canvas, Controls, Meta } from "@storybook/blocks";
+import * as Stories from "./Button.stories";
 
 <Meta of={Stories} />
 
@@ -7,58 +7,100 @@ import * as Stories from './Button.stories';
 
 Button base component.
 
-## Props
+<Canvas of={Stories.Default} withToolbar />
 
-<ArgTypes />
+<Controls of={Stories.Default} />
 
 ## Predefined properties
 
+### Type
+
+There are two type predefined properties: primary (default), and secondary.
+
+<Canvas of={Stories.PredefinedType} withToolbar />
+
 ### Format
 
-There are three format predefined properties: default, semiRounded and rounded.
+There are three format predefined properties: square, semiRounded (default), and rounded.
 
-<Canvas withToolbar>
-  <Story of={Stories.PredefinedFormat} />
-</Canvas>
+<Canvas of={Stories.PredefinedFormat} withToolbar />
 
 ### Size
 
-There are three size predefined properties: small, medium and large.
+There are three size predefined properties: small, medium (default), and large.
 
-<Canvas withToolbar>
-  <Story of={Stories.PredefinedSize} />
-</Canvas>
+<Canvas of={Stories.PredefinedSize} withToolbar />
 
 ## Custom properties
 
-### Color
+### Background Color
 
-Button color can be modified.
+Button background color can be modified.
 
-<Canvas withToolbar>
-  <Story of={Stories.Color} />
-</Canvas>
+<Canvas of={Stories.BackgroundColor} withToolbar />
+
+### Hover Color
+
+Button hover color can be modified.
+
+<Canvas of={Stories.HoverColor} withToolbar />
+
+### Focus and Active Color
+
+Button focus and active color can be modified.
+
+<Canvas of={Stories.FocusAndActiveColor} withToolbar />
+
+### Border
+
+Button border can be modified.
+
+<Canvas of={Stories.Border} withToolbar />
+
+### Hover Border
+
+Button hover border can be modified.
+
+<Canvas of={Stories.HoverBorder} withToolbar />
+
+### Focus and Active Border
+
+Button focus and active border can be modified.
+
+<Canvas of={Stories.FocusAndActiveBorder} withToolbar />
+
+### Disabled Opacity
+
+Button disabled opacity can be modified.
+
+<Canvas of={Stories.DisabledOpacity} withToolbar />
 
 ### Format
 
-Button format can be modified.
+Button format can be modified by border radius definition.
 
-<Canvas withToolbar>
-  <Story of={Stories.CustomFormat} />
-</Canvas>
+<Canvas of={Stories.CustomFormat} withToolbar />
 
 ### Size
 
-Button size can be modified.
+Button size can be modified by padding definition.
 
-<Canvas withToolbar>
-  <Story of={Stories.CustomSize} />
-</Canvas>
+<Canvas of={Stories.CustomSize} withToolbar />
 
-### Text property
+### Text Font Weight
 
-Button text property can be modified.
+Button text font weight can be modified.
 
-<Canvas withToolbar>
-  <Story of={Stories.TextProperty} />
-</Canvas>
+<Canvas of={Stories.TextFontWeight} withToolbar />
+
+### Text Font Family
+
+Button text font family can be modified.
+
+<Canvas of={Stories.TextFontFamily} withToolbar />
+
+### Text Font Size
+
+Button text font size can be modified.
+
+<Canvas of={Stories.TextFontSize} withToolbar />

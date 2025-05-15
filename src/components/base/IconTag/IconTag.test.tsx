@@ -116,17 +116,6 @@ describe("<IconTag />", () => {
     );
   });
 
-  it("should render component with bold text font weight", () => {
-    render(<IconTag src="image" text="IconTag" textWeight="bold" />);
-
-    const element = screen.getByTestId("tag");
-
-    expect(within(element).getByText("IconTag")).toHaveStyleRule(
-      "font-weight",
-      "bold",
-    );
-  });
-
   it("should render component with custom text font weight", () => {
     render(<IconTag src="image" text="IconTag" textFontWeight={200} />);
 

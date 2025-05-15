@@ -98,17 +98,6 @@ describe("<Tag />", () => {
     expect(within(element).getByText("Tag")).toHaveStyleRule("color", "#000");
   });
 
-  it("should render component with bold text font weight", () => {
-    render(<Tag text="Tag" textWeight="bold" />);
-
-    const element = screen.getByTestId("tag");
-
-    expect(within(element).getByText("Tag")).toHaveStyleRule(
-      "font-weight",
-      "bold",
-    );
-  });
-
   it("should render component with custom text font weight", () => {
     render(<Tag text="Tag" textFontWeight={200} />);
 

@@ -1,3 +1,31 @@
+## 0.9.0
+
+_Mar. 15, 2025_
+
+### Breaking Changes
+
+- remove textWeight Button property, but is possible to use textFontWeight
+- remove textWeight IconButton property, but is possible to use textFontWeight
+- remove textWeight Tag property, but is possible to use textFontWeight
+- remove textWeight IconTag property, but is possible to use textFontWeight
+
+### Major Changes
+
+- update general Button default predefined properties: sizes behavior, colors behavior, format behavior, border behavior
+
+### General Changes
+
+- update storybook and dependencies
+- add focusColor props to Button
+- add activeColor props to Button
+- add disabledOpacity props to Button
+- add border props to Button
+- add hoverBorder props to Button
+- add focusBorder props to Button
+- add activeBorder props to Button
+- update Button tests
+- update Button docs
+
 ## 0.8.7
 
 _Mar. 25, 2025_

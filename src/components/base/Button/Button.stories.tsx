@@ -1,106 +1,185 @@
 import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import Button from "./Button";
 import StorybookContainer from "../StorybookContainer/StorybookContainer";
 
 const meta: Meta<typeof Button> = {
-  component: Button,
   title: "Button",
+  component: Button,
   argTypes: {},
 };
+
 export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const PredefinedFormat: Story = (args) => (
-  <StorybookContainer>
-    <Button {...args} />
-    <Button {...args} format="semiRounded" />
-    <Button {...args} format="rounded" />
-  </StorybookContainer>
-);
-
-PredefinedFormat.args = {
-  text: "Button",
-  format: "default",
+export const Default: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+    </StorybookContainer>
+  ),
 };
 
-export const PredefinedSize: Story = (args) => (
-  <StorybookContainer>
-    <Button {...args} />
-    <Button {...args} size="medium" />
-    <Button {...args} size="large" />
-  </StorybookContainer>
-);
-
-PredefinedSize.args = {
-  text: "Button",
-  size: "small",
+export const PredefinedType: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} type="secondary" />
+    </StorybookContainer>
+  ),
 };
 
-export const Color: Story = (args) => (
-  <StorybookContainer>
-    <Button {...args} />
-    <Button {...args} disabled />
-    <Button {...args} backgroundColor="#ee4b2b" hoverColor="#d22b2b" />
-    <Button {...args} disabled backgroundColor="#ee4b2b" hoverColor="#d22b2b" />
-    <Button
-      {...args}
-      backgroundColor="#ee4b2b"
-      hoverColor="#d22b2b"
-      textColor="#fff"
-    />
-    <Button
-      {...args}
-      disabled
-      backgroundColor="#ee4b2b"
-      hoverColor="#d22b2b"
-      textColor="#fff"
-    />
-  </StorybookContainer>
-);
-
-Color.args = {
-  text: "Button",
-  backgroundColor: "#d3d3d3",
-  hoverColor: "#a9a9a9",
-  textColor: "#000",
+export const PredefinedFormat: Story = {
+  args: {
+    format: "square",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} format="semiRounded" />
+      <Button {...args} format="rounded" />
+    </StorybookContainer>
+  ),
 };
 
-export const CustomFormat: Story = (args) => (
-  <StorybookContainer>
-    <Button {...args} />
-    <Button {...args} borderRadius="15px 2px" />
-  </StorybookContainer>
-);
-
-CustomFormat.args = {
-  text: "Button",
-  borderRadius: "0",
+export const PredefinedSize: Story = {
+  args: {
+    size: "small",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} size="medium" />
+      <Button {...args} size="large" />
+    </StorybookContainer>
+  ),
 };
 
-export const CustomSize: Story = (args) => (
-  <StorybookContainer>
-    <Button {...args} />
-    <Button {...args} padding="20px 40px" />
-  </StorybookContainer>
-);
-
-CustomSize.args = {
-  text: "Button",
-  padding: "7px",
+export const BackgroundColor: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} backgroundColor="#3b82f6" />
+    </StorybookContainer>
+  ),
 };
 
-export const TextProperty: Story = (args) => (
-  <StorybookContainer>
-    <Button {...args} />
-    <Button {...args} textWeight="bold" />
-    <Button {...args} textFontWeight={100} />
-    <Button {...args} textFontFamily="Times New Roman" />
-    <Button {...args} textFontSize="20px" />
-  </StorybookContainer>
-);
+export const HoverColor: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} hoverColor="#166534" />
+    </StorybookContainer>
+  ),
+};
 
-TextProperty.args = {
-  text: "Button",
+export const FocusAndActiveColor: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} focusColor="#166534" activeColor="#14532d" />
+    </StorybookContainer>
+  ),
+};
+
+export const Border: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} border="1px solid #166534" />
+    </StorybookContainer>
+  ),
+};
+
+export const HoverBorder: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} hoverBorder="1px solid #166534" />
+    </StorybookContainer>
+  ),
+};
+
+export const FocusAndActiveBorder: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button
+        {...args}
+        focusBorder="1px solid #166534"
+        activeBorder="2px solid #166534"
+      />
+    </StorybookContainer>
+  ),
+};
+
+export const DisabledOpacity: Story = {
+  args: {
+    disabled: true,
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} disabledOpacity={0.2} />
+    </StorybookContainer>
+  ),
+};
+
+export const CustomFormat: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} borderRadius="15px 2px" />
+    </StorybookContainer>
+  ),
+};
+
+export const CustomSize: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} padding="20px 40px" />
+    </StorybookContainer>
+  ),
+};
+
+export const TextFontWeight: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} textFontWeight={100} />
+    </StorybookContainer>
+  ),
+};
+
+export const TextFontFamily: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} textFontFamily="Times New Roman" />
+    </StorybookContainer>
+  ),
+};
+
+export const TextFontSize: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} textFontSize="20px" />
+    </StorybookContainer>
+  ),
 };

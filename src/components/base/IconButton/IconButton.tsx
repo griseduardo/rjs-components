@@ -59,7 +59,6 @@ export const StyledIconButton = styled.button<StyledIconButtonProps>`
 const IconButton = ({
   text,
   textColor,
-  textWeight,
   textFontWeight,
   textFontSize,
   textFontFamily,
@@ -110,7 +109,6 @@ const IconButton = ({
     <Div>
       <Text
         color={textColor}
-        weight={textWeight}
         fontWeight={textFontWeight}
         fontSize={textFontSize}
         fontFamily={textFontFamily}

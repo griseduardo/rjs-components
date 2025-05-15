@@ -13,13 +13,31 @@ describe("<Button />", () => {
     const element = screen.getByRole("button", { name: "Button" });
 
     expect(element).toBeInTheDocument();
-    expect(element).toHaveStyleRule("background-color", "#d3d3d3");
-    expect(element).toHaveStyleRule("border-radius", "0");
-    expect(element).toHaveStyleRule("padding", "7px");
+    expect(element).toHaveStyleRule("background-color", "#10b981");
+    expect(element).toHaveStyleRule("border-radius", "5px");
+    expect(element).toHaveStyleRule("padding", "13px");
+    expect(element).toHaveStyleRule("border", "none");
     expect(element).not.toBeDisabled;
     expect(within(element).getByText("Button")).toHaveStyleRule(
       "color",
-      "#000",
+      "#fff",
+    );
+  });
+
+  it("should render component with type secondary properties", () => {
+    render(<Button text="Button" type="secondary" />);
+
+    const element = screen.getByRole("button", { name: "Button" });
+
+    expect(element).toBeInTheDocument();
+    expect(element).toHaveStyleRule("background-color", "#fff");
+    expect(element).toHaveStyleRule("border-radius", "5px");
+    expect(element).toHaveStyleRule("padding", "12px");
+    expect(element).toHaveStyleRule("border", "1px solid #10b981");
+    expect(element).not.toBeDisabled;
+    expect(within(element).getByText("Button")).toHaveStyleRule(
+      "color",
+      "#10b981",
     );
   });
 
@@ -32,12 +50,12 @@ describe("<Button />", () => {
     );
   });
 
-  it("should render component with semi rounded format", () => {
-    render(<Button text="Button" format="semiRounded" />);
+  it("should render component with square format", () => {
+    render(<Button text="Button" format="square" />);
 
     expect(screen.getByRole("button", { name: "Button" })).toHaveStyleRule(
       "border-radius",
-      "5px",
+      "0",
     );
   });
 
@@ -59,12 +77,12 @@ describe("<Button />", () => {
     );
   });
 
-  it("should render component with medium size", () => {
-    render(<Button text="Button" size="medium" />);
+  it("should render component with small size", () => {
+    render(<Button text="Button" size="small" />);
 
     expect(screen.getByRole("button", { name: "Button" })).toHaveStyleRule(
       "padding",
-      "10px 12px",
+      "9px",
     );
   });
 
@@ -73,7 +91,7 @@ describe("<Button />", () => {
 
     expect(screen.getByRole("button", { name: "Button" })).toHaveStyleRule(
       "padding",
-      "15px 20px",
+      "19px 16px",
     );
   });
 
@@ -83,6 +101,15 @@ describe("<Button />", () => {
     expect(screen.getByRole("button", { name: "Button" })).toHaveStyleRule(
       "padding",
       "20px 10px",
+    );
+  });
+
+  it("should render component with custom border", () => {
+    render(<Button text="Button" border="2px solid #fff" />);
+
+    expect(screen.getByRole("button", { name: "Button" })).toHaveStyleRule(
+      "border",
+      "2px solid #fff",
     );
   });
 
@@ -114,17 +141,6 @@ describe("<Button />", () => {
     expect(within(element).getByText("Button")).toHaveStyleRule(
       "color",
       "#fff",
-    );
-  });
-
-  it("should render component with bold text font weight", () => {
-    render(<Button text="Button" textWeight="bold" />);
-
-    const element = screen.getByRole("button", { name: "Button" });
-
-    expect(within(element).getByText("Button")).toHaveStyleRule(
-      "font-weight",
-      "bold",
     );
   });
 

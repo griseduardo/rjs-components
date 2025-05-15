@@ -39,7 +39,6 @@ const Tag = ({
   text,
   type,
   textColor,
-  textWeight,
   textFontWeight,
   textFontSize,
   textFontFamily,
@@ -60,7 +59,6 @@ const Tag = ({
   >
     <Text
       color={textColor || "#fff"}
-      weight={textWeight}
       fontWeight={textFontWeight}
       fontSize={textFontSize}
       fontFamily={textFontFamily}

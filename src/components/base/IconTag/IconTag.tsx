@@ -53,7 +53,6 @@ const IconTag = ({
   text,
   type,
   textColor,
-  textWeight,
   textFontWeight,
   textFontSize,
   textFontFamily,
@@ -100,7 +99,6 @@ const IconTag = ({
     <Div>
       <Text
         color={textColor || "#fff"}
-        weight={textWeight}
         fontWeight={textFontWeight}
         fontSize={textFontSize}
         fontFamily={textFontFamily}
