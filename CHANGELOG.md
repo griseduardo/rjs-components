@@ -1,6 +1,18 @@
+## 0.10.0
+
+_Jun. 02, 2025_
+
+### Major Changes
+
+- remove Text font family default property
+
+### General Changes
+
+- update Text docs
+
 ## 0.9.0
 
-_Mar. 15, 2025_
+_May. 15, 2025_
 
 ### Breaking Changes
 

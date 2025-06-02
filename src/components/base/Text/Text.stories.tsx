@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import Text from "./Text";
 import StorybookContainer from "../StorybookContainer/StorybookContainer";
 
@@ -8,71 +8,76 @@ const meta: Meta<typeof Text> = {
   title: "Text",
   argTypes: {},
 };
+
 export default meta;
 
 type Story = StoryObj<typeof Text>;
 
-export const PredefinedFontWeight: Story = (args) => (
-  <StorybookContainer>
-    <Text {...args}>Text</Text>
-    <Text {...args} weight="bold">
-      Text
-    </Text>
-  </StorybookContainer>
-);
-
-PredefinedFontWeight.args = {
-  weight: "normal",
+export const Default: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Text {...args}>Text</Text>
+    </StorybookContainer>
+  ),
 };
 
-export const Color: Story = (args) => (
-  <StorybookContainer>
-    <Text {...args}>Text</Text>
-    <Text {...args} color="#800080">
-      Text
-    </Text>
-  </StorybookContainer>
-);
-
-Color.args = {
-  color: "#000",
+export const PredefinedFontWeight: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Text {...args}>Text</Text>
+      <Text {...args} weight="bold">
+        Text
+      </Text>
+    </StorybookContainer>
+  ),
 };
 
-export const CustomFontWeight: Story = (args) => (
-  <StorybookContainer>
-    <Text {...args}>Text</Text>
-    <Text {...args} fontWeight={900}>
-      Text
-    </Text>
-  </StorybookContainer>
-);
-
-CustomFontWeight.args = {
-  fontWeight: 400,
+export const Color: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Text {...args}>Text</Text>
+      <Text {...args} color="#800080">
+        Text
+      </Text>
+    </StorybookContainer>
+  ),
 };
 
-export const FontSize: Story = (args) => (
-  <StorybookContainer>
-    <Text {...args}>Text</Text>
-    <Text {...args} fontSize="30px">
-      Text
-    </Text>
-  </StorybookContainer>
-);
-
-FontSize.args = {
-  fontSize: "16px",
+export const CustomFontWeight: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Text {...args}>Text</Text>
+      <Text {...args} fontWeight={900}>
+        Text
+      </Text>
+    </StorybookContainer>
+  ),
 };
 
-export const FontFamily: Story = (args) => (
-  <StorybookContainer>
-    <Text {...args}>Text</Text>
-    <Text {...args} fontFamily="Times New Roman">
-      Text
-    </Text>
-  </StorybookContainer>
-);
+export const CustomFontSize: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Text {...args}>Text</Text>
+      <Text {...args} fontSize="20px">
+        Text
+      </Text>
+    </StorybookContainer>
+  ),
+};
 
-FontFamily.args = {
-  fontFamily: "Arial",
+export const FontFamily: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Text {...args}>Text</Text>
+      <Text {...args} fontFamily="Arial">
+        Text
+      </Text>
+    </StorybookContainer>
+  ),
 };
