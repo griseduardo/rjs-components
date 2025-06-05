@@ -1,3 +1,16 @@
+## 0.11.0
+
+_Jun. 05, 2025_
+
+### Major Changes
+
+- remove Paragraph font family default property
+
+### General Changes
+
+- update Paragraph docs
+- update Text docs
+
 ## 0.10.0
 
 _Jun. 02, 2025_

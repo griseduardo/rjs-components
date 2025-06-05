@@ -14,10 +14,12 @@ export default meta;
 type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    children: "Text",
+  },
   render: (args) => (
     <StorybookContainer>
-      <Text {...args}>Text</Text>
+      <Text {...args}>{args.children}</Text>
     </StorybookContainer>
   ),
 };

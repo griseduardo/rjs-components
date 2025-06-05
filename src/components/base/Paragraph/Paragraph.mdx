@@ -1,4 +1,4 @@
-import { ArgTypes, Canvas, Meta } from "@storybook/blocks";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
 import * as Stories from "./Paragraph.stories";
 
 <Meta of={Stories} />
@@ -7,15 +7,15 @@ import * as Stories from "./Paragraph.stories";
 
 Paragraph base component. The text that appears needs to be passed as children.
 
-## Props
+<Canvas of={Stories.Default} withToolbar />
 
-<ArgTypes />
+<Controls of={Stories.Default} />
 
 ## Predefined properties
 
 ### Font Weight
 
-There are two font weight predefined properties: normal and bold.
+There are two font weight predefined properties: normal(default) and bold.
 
 <Canvas of={Stories.PredefinedFontWeight} withToolbar />
 
@@ -29,7 +29,7 @@ Paragraph color can be modified.
 
 ### Font Weight
 
-Besides the predefined weights, custom weight can be passed.
+Besides the predefined weights, Paragraph weight can be modified by fontWeight definition.
 
 <Canvas of={Stories.CustomFontWeight} withToolbar />
 
@@ -37,7 +37,7 @@ Besides the predefined weights, custom weight can be passed.
 
 Paragraph font size can be modified.
 
-<Canvas of={Stories.FontSize} withToolbar />
+<Canvas of={Stories.CustomFontSize} withToolbar />
 
 ### Font Family
 

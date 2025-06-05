@@ -12,67 +12,73 @@ export default meta;
 
 type Story = StoryObj<typeof Paragraph>;
 
-export const PredefinedFontWeight: Story = (args) => (
-  <StorybookContainer>
-    <Paragraph {...args}>Paragraph</Paragraph>
-    <Paragraph {...args} weight="bold">
-      Paragraph
-    </Paragraph>
-  </StorybookContainer>
-);
-
-PredefinedFontWeight.args = {
-  weight: "normal",
+export const Default: Story = {
+  args: {
+    children: "Paragraph",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Paragraph {...args}>{args.children}</Paragraph>
+    </StorybookContainer>
+  ),
 };
 
-export const Color: Story = (args) => (
-  <StorybookContainer>
-    <Paragraph {...args}>Paragraph</Paragraph>
-    <Paragraph {...args} color="#800080">
-      Paragraph
-    </Paragraph>
-  </StorybookContainer>
-);
-
-Color.args = {
-  color: "#000",
+export const PredefinedFontWeight: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Paragraph {...args}>Paragraph</Paragraph>
+      <Paragraph {...args} weight="bold">
+        Paragraph
+      </Paragraph>
+    </StorybookContainer>
+  ),
 };
 
-export const CustomFontWeight: Story = (args) => (
-  <StorybookContainer>
-    <Paragraph {...args}>Paragraph</Paragraph>
-    <Paragraph {...args} fontWeight={900}>
-      Paragraph
-    </Paragraph>
-  </StorybookContainer>
-);
-
-CustomFontWeight.args = {
-  fontWeight: 400,
+export const Color: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Paragraph {...args}>Paragraph</Paragraph>
+      <Paragraph {...args} color="#800080">
+        Paragraph
+      </Paragraph>
+    </StorybookContainer>
+  ),
 };
 
-export const FontSize: Story = (args) => (
-  <StorybookContainer>
-    <Paragraph {...args}>Paragraph</Paragraph>
-    <Paragraph {...args} fontSize="30px">
-      Paragraph
-    </Paragraph>
-  </StorybookContainer>
-);
-
-FontSize.args = {
-  fontSize: "16px",
+export const CustomFontWeight: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Paragraph {...args}>Paragraph</Paragraph>
+      <Paragraph {...args} fontWeight={900}>
+        Paragraph
+      </Paragraph>
+    </StorybookContainer>
+  ),
 };
 
-export const FontFamily: Story = (args) => (
-  <StorybookContainer>
-    <Paragraph {...args}>Paragraph</Paragraph>
-    <Paragraph {...args} fontFamily="Times New Roman">
-      Paragraph
-    </Paragraph>
-  </StorybookContainer>
-);
+export const CustomFontSize: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Paragraph {...args}>Paragraph</Paragraph>
+      <Paragraph {...args} fontSize="20px">
+        Paragraph
+      </Paragraph>
+    </StorybookContainer>
+  ),
+};
 
-FontFamily.args = {
-  fontFamily: "Arial",
+export const FontFamily: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Paragraph {...args}>Paragraph</Paragraph>
+      <Paragraph {...args} fontFamily="Arial">
+        Paragraph
+      </Paragraph>
+    </StorybookContainer>
+  ),
 };

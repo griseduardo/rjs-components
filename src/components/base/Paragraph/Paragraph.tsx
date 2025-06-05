@@ -3,23 +3,23 @@ import styled from "styled-components";
 import { CommonTextProps, StyledCommonTextProps } from "../Common.types";
 
 export const StyledParagraph = styled.p<StyledCommonTextProps>`
-  color: ${(props) => (props.$color ? props.$color : "#000")};
-  font-size: ${(props) => (props.$fontSize ? props.$fontSize : "16px")};
+  ${(props) => props.$color && `color: ${props.$color};`}
+  ${(props) => props.$fontSize && `font-size: ${props.$fontSize};`}
   font-weight: ${(props) =>
     props.$fontWeight
       ? props.$fontWeight
       : props.$weight
         ? props.$weight
         : "normal"};
-  font-family: ${(props) => (props.$fontFamily ? props.$fontFamily : "Arial")};
+  ${(props) => props.$fontFamily && `font-family: ${props.$fontFamily};`}
 `;
 
 const Paragraph = ({
   children,
-  color,
-  weight,
+  color = "#000",
+  weight = "normal",
   fontWeight,
-  fontSize,
+  fontSize = "16px",
   fontFamily,
 }: CommonTextProps) => (
   <StyledParagraph
