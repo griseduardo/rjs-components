@@ -176,4 +176,15 @@ describe("<Button />", () => {
       "Times New Roman",
     );
   });
+
+  it("should render component with custom text color", () => {
+    render(<Button text="Button" textColor="#000" />);
+
+    const element = screen.getByRole("button", { name: "Button" });
+
+    expect(within(element).getByText("Button")).toHaveStyleRule(
+      "color",
+      "#000",
+    );
+  });
 });

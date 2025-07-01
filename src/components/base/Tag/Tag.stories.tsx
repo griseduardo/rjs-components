@@ -4,101 +4,138 @@ import Tag from "./Tag";
 import StorybookContainer from "../StorybookContainer/StorybookContainer";
 
 const meta: Meta<typeof Tag> = {
-  component: Tag,
   title: "Tag",
+  component: Tag,
   argTypes: {},
 };
+
 export default meta;
 
 type Story = StoryObj<typeof Tag>;
 
-export const PredefinedType: Story = (args) => (
-  <StorybookContainer>
-    <Tag {...args} />
-    <Tag {...args} text="Success" type="success" />
-    <Tag {...args} text="Alert" type="alert" />
-    <Tag {...args} text="Error" type="error" />
-  </StorybookContainer>
-);
-
-PredefinedType.args = {
-  text: "Default",
+export const Default: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Tag {...args} />
+    </StorybookContainer>
+  ),
 };
 
-export const PredefinedFormat: Story = (args) => (
-  <StorybookContainer>
-    <Tag {...args} />
-    <Tag {...args} format="semiRounded" />
-    <Tag {...args} format="rounded" />
-  </StorybookContainer>
-);
-
-PredefinedFormat.args = {
-  text: "Tag",
-  format: "default",
+export const PredefinedType: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Tag {...args} />
+      <Tag {...args} type="success" />
+      <Tag {...args} type="alert" />
+      <Tag {...args} type="error" />
+    </StorybookContainer>
+  ),
 };
 
-export const PredefinedSize: Story = (args) => (
-  <StorybookContainer>
-    <Tag {...args} />
-    <Tag {...args} size="medium" />
-    <Tag {...args} size="large" />
-  </StorybookContainer>
-);
-
-PredefinedSize.args = {
-  text: "Tag",
-  size: "small",
+export const PredefinedFormat: Story = {
+  args: {
+    format: "square",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Tag {...args} />
+      <Tag {...args} format="semiRounded" />
+      <Tag {...args} format="rounded" />
+    </StorybookContainer>
+  ),
 };
 
-export const Color: Story = (args) => (
-  <StorybookContainer>
-    <Tag {...args} />
-    <Tag {...args} backgroundColor="#89cff0" />
-    <Tag {...args} backgroundColor="#89cff0" textColor="#0047ab" />
-  </StorybookContainer>
-);
-
-Color.args = {
-  text: "Tag",
-  backgroundColor: "#d3d3d3",
-  textColor: "#fff",
+export const PredefinedSize: Story = {
+  args: {
+    size: "small",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Tag {...args} />
+      <Tag {...args} size="medium" />
+      <Tag {...args} size="large" />
+    </StorybookContainer>
+  ),
 };
 
-export const CustomFormat: Story = (args) => (
-  <StorybookContainer>
-    <Tag {...args} />
-    <Tag {...args} borderRadius="15px 2px" />
-  </StorybookContainer>
-);
-
-CustomFormat.args = {
-  text: "Tag",
-  borderRadius: "0",
+export const BackgroundColor: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Tag {...args} />
+      <Tag {...args} backgroundColor="#3b82f6" />
+    </StorybookContainer>
+  ),
 };
 
-export const CustomSize: Story = (args) => (
-  <StorybookContainer>
-    <Tag {...args} />
-    <Tag {...args} padding="20px 10px" />
-  </StorybookContainer>
-);
-
-CustomSize.args = {
-  text: "Tag",
-  padding: "7px",
+export const Border: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Tag {...args} />
+      <Tag {...args} border="1px solid #166534" />
+    </StorybookContainer>
+  ),
 };
 
-export const TextProperty: Story = (args) => (
-  <StorybookContainer>
-    <Tag {...args} />
-    <Tag {...args} textWeight="bold" />
-    <Tag {...args} textFontWeight={100} />
-    <Tag {...args} textFontFamily="Times New Roman" />
-    <Tag {...args} textFontSize="20px" />
-  </StorybookContainer>
-);
+export const CustomFormat: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Tag {...args} />
+      <Tag {...args} borderRadius="15px 2px" />
+    </StorybookContainer>
+  ),
+};
 
-TextProperty.args = {
-  text: "Tag",
+export const CustomSize: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Tag {...args} />
+      <Tag {...args} padding="20px 40px" />
+    </StorybookContainer>
+  ),
+};
+
+export const TextFontWeight: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Tag {...args} />
+      <Tag {...args} textFontWeight={100} />
+    </StorybookContainer>
+  ),
+};
+
+export const TextFontFamily: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Tag {...args} />
+      <Tag {...args} textFontFamily="Arial" />
+    </StorybookContainer>
+  ),
+};
+
+export const TextFontSize: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Tag {...args} />
+      <Tag {...args} textFontSize="20px" />
+    </StorybookContainer>
+  ),
+};
+
+export const TextColor: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Tag {...args} />
+      <Tag {...args} textColor="#000" />
+    </StorybookContainer>
+  ),
 };

@@ -1,3 +1,17 @@
+## 0.12.0
+
+_Jul. 01, 2025_
+
+### Major Changes
+
+- update general Tag default predefined properties: sizes behavior, format behavior
+
+### General Changes
+
+- add border props to Tag
+- update Tag tests
+- update Tag docs
+
 ## 0.11.0
 
 _Jun. 05, 2025_

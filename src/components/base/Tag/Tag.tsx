@@ -3,16 +3,24 @@ import styled from "styled-components";
 import Text from "../Text/Text";
 import { CommonTagProps, StyledCommonTagProps } from "../Common.types";
 
-export const StyledTag = styled.div<StyledCommonTagProps>`
+export interface TagProps extends CommonTagProps {
+  border?: string;
+}
+
+export interface StyledTagProps extends StyledCommonTagProps {
+  $border?: string;
+}
+
+export const StyledTag = styled.div<StyledTagProps>`
   border: none;
   padding: ${(props) =>
     props.$padding
       ? props.$padding
       : props.$size === "large"
-        ? "15px 20px"
+        ? "19px 16px"
         : props.$size === "medium"
-          ? "10px 12px"
-          : "7px"};
+          ? "13px"
+          : props.$size === "small" && "9px"};
   background-color: ${(props) =>
     props.$backgroundColor
       ? props.$backgroundColor
@@ -22,7 +30,7 @@ export const StyledTag = styled.div<StyledCommonTagProps>`
           ? "#f8de7e"
           : props.$type === "success"
             ? "#50c878"
-            : "#d3d3d3"};
+            : props.$type === "default" && "#d3d3d3"};
   pointer-events: none;
   border-radius: ${(props) =>
     props.$borderRadius
@@ -31,41 +39,54 @@ export const StyledTag = styled.div<StyledCommonTagProps>`
         ? "30px"
         : props.$format === "semiRounded"
           ? "5px"
-          : "0"};
+          : props.$format === "square" && "0"};
   width: fit-content;
+  ${(props) => props.$border && `border: ${props.$border};`}
 `;
 
 const Tag = ({
-  text,
-  type,
-  textColor,
-  textFontWeight,
+  text = "Tag",
+  type = "default",
+  textColor = "#fff",
+  textFontWeight = 600,
   textFontSize,
   textFontFamily,
   backgroundColor,
-  format,
+  format = "semiRounded",
   borderRadius,
-  size,
+  size = "medium",
   padding,
-}: CommonTagProps) => (
-  <StyledTag
-    data-testid="tag"
-    $type={type}
-    $backgroundColor={backgroundColor}
-    $format={format}
-    $borderRadius={borderRadius}
-    $size={size}
-    $padding={padding}
-  >
-    <Text
-      color={textColor || "#fff"}
-      fontWeight={textFontWeight}
-      fontSize={textFontSize}
-      fontFamily={textFontFamily}
+  border,
+}: TagProps) => {
+  const fontSize = textFontSize
+    ? textFontSize
+    : size === "large"
+      ? "18px"
+      : size === "small"
+        ? "14px"
+        : "16px";
+
+  return (
+    <StyledTag
+      data-testid="tag"
+      $type={type}
+      $backgroundColor={backgroundColor}
+      $format={format}
+      $borderRadius={borderRadius}
+      $size={size}
+      $padding={padding}
+      $border={border}
     >
-      {text}
-    </Text>
-  </StyledTag>
-);
+      <Text
+        color={textColor}
+        fontWeight={textFontWeight}
+        fontSize={fontSize}
+        fontFamily={textFontFamily}
+      >
+        {text}
+      </Text>
+    </StyledTag>
+  );
+};
 
 export default Tag;

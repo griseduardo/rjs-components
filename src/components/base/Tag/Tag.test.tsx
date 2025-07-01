@@ -13,8 +13,9 @@ describe("<Tag />", () => {
 
     expect(element).toBeInTheDocument();
     expect(element).toHaveStyleRule("background-color", "#d3d3d3");
-    expect(element).toHaveStyleRule("border-radius", "0");
-    expect(element).toHaveStyleRule("padding", "7px");
+    expect(element).toHaveStyleRule("border-radius", "5px");
+    expect(element).toHaveStyleRule("padding", "13px");
+    expect(element).toHaveStyleRule("border", "none");
     expect(within(element).getByText("Tag")).toHaveStyleRule("color", "#fff");
   });
 
@@ -54,10 +55,10 @@ describe("<Tag />", () => {
     );
   });
 
-  it("should render component with semi rounded format", () => {
-    render(<Tag text="Tag" format="semiRounded" />);
+  it("should render component with square format", () => {
+    render(<Tag text="Tag" format="square" />);
 
-    expect(screen.getByTestId("tag")).toHaveStyleRule("border-radius", "5px");
+    expect(screen.getByTestId("tag")).toHaveStyleRule("border-radius", "0");
   });
 
   it("should render component with rounded format", () => {
@@ -72,22 +73,31 @@ describe("<Tag />", () => {
     expect(screen.getByTestId("tag")).toHaveStyleRule("border-radius", "20px");
   });
 
-  it("should render component with medium size", () => {
-    render(<Tag text="Tag" size="medium" />);
+  it("should render component with small size", () => {
+    render(<Tag text="Tag" size="small" />);
 
-    expect(screen.getByTestId("tag")).toHaveStyleRule("padding", "10px 12px");
+    expect(screen.getByTestId("tag")).toHaveStyleRule("padding", "9px");
   });
 
   it("should render component with large size", () => {
     render(<Tag text="Tag" size="large" />);
 
-    expect(screen.getByTestId("tag")).toHaveStyleRule("padding", "15px 20px");
+    expect(screen.getByTestId("tag")).toHaveStyleRule("padding", "19px 16px");
   });
 
   it("should render component with custom size", () => {
     render(<Tag text="Tag" padding="20px 10px" />);
 
     expect(screen.getByTestId("tag")).toHaveStyleRule("padding", "20px 10px");
+  });
+
+  it("should render component with custom border", () => {
+    render(<Tag text="Tag" border="2px solid #fff" />);
+
+    expect(screen.getByTestId("tag")).toHaveStyleRule(
+      "border",
+      "2px solid #fff",
+    );
   });
 
   it("should render component with custom text color", () => {
@@ -129,5 +139,13 @@ describe("<Tag />", () => {
       "font-family",
       "Times New Roman",
     );
+  });
+
+  it("should render component with custom text color", () => {
+    render(<Tag text="Tag" textColor="#000" />);
+
+    const element = screen.getByTestId("tag");
+
+    expect(within(element).getByText("Tag")).toHaveStyleRule("color", "#000");
   });
 });

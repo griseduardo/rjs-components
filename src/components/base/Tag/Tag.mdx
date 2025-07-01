@@ -1,4 +1,4 @@
-import { ArgTypes, Canvas, Meta } from "@storybook/blocks";
+import { Canvas, Controls, Meta } from "@storybook/blocks";
 import * as Stories from "./Tag.stories";
 
 <Meta of={Stories} />
@@ -7,9 +7,9 @@ import * as Stories from "./Tag.stories";
 
 Tag base component.
 
-## Props
+<Canvas of={Stories.Default} withToolbar />
 
-<ArgTypes />
+<Controls of={Stories.Default} />
 
 ## Predefined properties
 
@@ -21,38 +21,62 @@ There are four type predefined properties: default, success, alert and error.
 
 ### Format
 
-There are three format predefined properties: default, semiRounded and rounded.
+There are three format predefined properties: square, semiRounded (default) and rounded.
 
 <Canvas of={Stories.PredefinedFormat} withToolbar />
 
 ### Size
 
-There are three size predefined properties: small, medium and large.
+There are three size predefined properties: small, medium (default) and large.
 
 <Canvas of={Stories.PredefinedSize} withToolbar />
 
 ## Custom properties
 
-### Color
+### Background Color
 
-Tag color can be modified.
+Tag background color can be modified.
 
-<Canvas of={Stories.Color} withToolbar />
+<Canvas of={Stories.BackgroundColor} withToolbar />
+
+### Border
+
+Tag border can be modified.
+
+<Canvas of={Stories.Border} withToolbar />
 
 ### Format
 
-Tag format can be modified.
+Besides the predefined formats, Tag format can be modified by borderRadius definition.
 
 <Canvas of={Stories.CustomFormat} withToolbar />
 
 ### Size
 
-Tag size can be modified.
+Besides the predefined sizes, Tag size can be modified by padding definition.
 
 <Canvas of={Stories.CustomSize} withToolbar />
 
-### Text Property
+### Text Font Weight
 
-Tag text property can be modified.
+Tag text font weight can be modified.
 
-<Canvas of={Stories.TextProperty} withToolbar />
+<Canvas of={Stories.TextFontWeight} withToolbar />
+
+### Text Font Family
+
+Tag text font family can be modified.
+
+<Canvas of={Stories.TextFontFamily} withToolbar />
+
+### Text Font Size
+
+Tag text font size can be modified.
+
+<Canvas of={Stories.TextFontSize} withToolbar />
+
+### Text Color
+
+Tag text color can be modified.
+
+<Canvas of={Stories.TextColor} withToolbar />

@@ -183,3 +183,13 @@ export const TextFontSize: Story = {
     </StorybookContainer>
   ),
 };
+
+export const TextColor: Story = {
+  args: {},
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} textColor="#000" />
+    </StorybookContainer>
+  ),
+};
