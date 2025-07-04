@@ -8,6 +8,7 @@ export interface ImgProps {
   width?: string;
   format?: string;
   borderRadius?: string;
+  objectFit?: string;
 }
 
 export interface StyledImgProps {
@@ -15,11 +16,13 @@ export interface StyledImgProps {
   $width?: string;
   $format?: string;
   $borderRadius?: string;
+  $objectFit?: string;
 }
 
 export const StyledImg = styled.img<StyledImgProps>`
-  height: ${(props) => props.$height || "auto"};
-  width: ${(props) => props.$width || "auto"};
+  ${(props) => props.$height && `height: ${props.$height};`}
+  ${(props) => props.$width && `width: ${props.$width};`}
+  ${(props) => props.$objectFit && `object-fit: ${props.$objectFit};`}
   border-radius: ${(props) =>
     props.$borderRadius
       ? props.$borderRadius
@@ -27,10 +30,20 @@ export const StyledImg = styled.img<StyledImgProps>`
         ? "30px"
         : props.$format === "semiRounded"
           ? "5px"
-          : "0px"};
+          : props.$format === "square"
+            ? "0"
+            : undefined};
 `;
 
-const Img = ({ src, alt, height, width, format, borderRadius }: ImgProps) => (
+const Img = ({
+  src,
+  alt,
+  height,
+  width,
+  format,
+  borderRadius,
+  objectFit,
+}: ImgProps) => (
   <StyledImg
     src={src}
     alt={alt}
@@ -38,6 +51,7 @@ const Img = ({ src, alt, height, width, format, borderRadius }: ImgProps) => (
     $width={width}
     $format={format}
     $borderRadius={borderRadius}
+    $objectFit={objectFit}
   />
 );
 

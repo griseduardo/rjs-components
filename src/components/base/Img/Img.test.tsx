@@ -12,8 +12,6 @@ describe("<Img />", () => {
     const element = screen.getByRole("img", { name: "" });
 
     expect(element).toBeInTheDocument();
-    expect(element).toHaveStyleRule("height", "auto");
-    expect(element).toHaveStyleRule("width", "auto");
   });
 
   it("should render component with custom height", () => {
@@ -22,7 +20,6 @@ describe("<Img />", () => {
     const element = screen.getByRole("img", { name: "" });
 
     expect(element).toHaveStyleRule("height", "20px");
-    expect(element).toHaveStyleRule("width", "auto");
   });
 
   it("should render component with custom width", () => {
@@ -31,7 +28,6 @@ describe("<Img />", () => {
     const element = screen.getByRole("img", { name: "" });
 
     expect(element).toHaveStyleRule("width", "20px");
-    expect(element).toHaveStyleRule("height", "auto");
   });
 
   it("should render component with custom height and width", () => {
@@ -47,6 +43,15 @@ describe("<Img />", () => {
     render(<Img src="image" alt="alt" />);
 
     expect(screen.getByRole("img", { name: "alt" })).toBeInTheDocument();
+  });
+
+  it("should render component with square format", () => {
+    render(<Img src="image" format="square" />);
+
+    expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
+      "border-radius",
+      "0",
+    );
   });
 
   it("should render component with semi rounded format", () => {
@@ -73,6 +78,15 @@ describe("<Img />", () => {
     expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
       "border-radius",
       "20px",
+    );
+  });
+
+  it("should render component with custom object fit", () => {
+    render(<Img src="image" objectFit="cover" />);
+
+    expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
+      "object-fit",
+      "cover",
     );
   });
 });

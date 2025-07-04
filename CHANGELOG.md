@@ -1,3 +1,17 @@
+## 0.13.0
+
+_Jul. 04, 2025_
+
+### Major Changes
+
+- update general Img default properties: width behavior, height behavior, border radius behavior
+
+### General Changes
+
+- add object fit props to Img
+- update Img tests
+- update Img docs
+
 ## 0.12.0
 
 _Jul. 01, 2025_
@@ -50,7 +64,7 @@ _May. 15, 2025_
 
 ### Major Changes
 
-- update general Button default predefined properties: sizes behavior, colors behavior, format behavior, border behavior
+- update general Button default properties: sizes behavior, colors behavior, format behavior, border behavior
 
 ### General Changes
 

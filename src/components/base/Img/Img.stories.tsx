@@ -12,60 +12,77 @@ export default meta;
 
 type Story = StoryObj<typeof Img>;
 
-export const PredefinedFormat: Story = (args) => (
-  <StorybookContainer>
-    <Img {...args} />
-    <Img {...args} format="semiRounded" />
-    <Img {...args} format="rounded" />
-  </StorybookContainer>
-);
-
-PredefinedFormat.args = {
-  src: "/example.jpg",
-  format: "default",
+export const Default: Story = {
+  args: {
+    src: "/example.jpg",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Img {...args} />
+    </StorybookContainer>
+  ),
 };
 
-export const Height: Story = (args) => (
-  <StorybookContainer>
-    <Img {...args} />
-    <Img {...args} height="200px" />
-  </StorybookContainer>
-);
-
-Height.args = {
-  src: "/example.jpg",
+export const PredefinedFormat: Story = {
+  args: {
+    src: "/example.jpg",
+    format: "square",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Img {...args} />
+      <Img {...args} format="semiRounded" />
+      <Img {...args} format="rounded" />
+    </StorybookContainer>
+  ),
 };
 
-export const Width: Story = (args) => (
-  <StorybookContainer>
-    <Img {...args} />
-    <Img {...args} width="200px" />
-  </StorybookContainer>
-);
-
-Width.args = {
-  src: "/example.jpg",
+export const Height: Story = {
+  args: {
+    src: "/example.jpg",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Img {...args} />
+      <Img {...args} height="200px" />
+    </StorybookContainer>
+  ),
 };
 
-export const HeightAndWidth: Story = (args) => (
-  <StorybookContainer>
-    <Img {...args} />
-    <Img {...args} height="200px" width="200px" />
-  </StorybookContainer>
-);
-
-HeightAndWidth.args = {
-  src: "/example.jpg",
+export const Width: Story = {
+  args: {
+    src: "/example.jpg",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Img {...args} />
+      <Img {...args} width="200px" />
+    </StorybookContainer>
+  ),
 };
 
-export const CustomFormat: Story = (args) => (
-  <StorybookContainer>
-    <Img {...args} />
-    <Img {...args} borderRadius="15px 2px" />
-  </StorybookContainer>
-);
+export const ObjectFit: Story = {
+  args: {
+    src: "/example.jpg",
+    width: "200px",
+    height: "200px",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Img {...args} />
+      <Img {...args} objectFit="cover" />
+    </StorybookContainer>
+  ),
+};
 
-CustomFormat.args = {
-  src: "/example.jpg",
-  borderRadius: "0",
+export const CustomFormat: Story = {
+  args: {
+    src: "/example.jpg",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Img {...args} />
+      <Img {...args} borderRadius="15px 2px" />
+    </StorybookContainer>
+  ),
 };
