@@ -1,6 +1,8 @@
 import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
 
+import Div from "../Div/Div";
+import Icon from "../Icon/Icon";
 import Text from "../Text/Text";
 import {
   CommonButtonTagProps,
@@ -19,6 +21,12 @@ export interface ButtonProps extends CommonButtonTagProps {
   focusBorder?: string;
   activeBorder?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  src?: string;
+  iconBorderRadius?: string;
+  iconPlacement?: "right" | "left";
+  iconHeight?: string;
+  iconWidth?: string;
+  spacing?: string;
 }
 
 export interface StyledButtonProps extends StyledCommonButtonTagProps {
@@ -41,6 +49,8 @@ export const StyledButton = styled.button<StyledButtonProps>`
         ? "none"
         : props.$type === "secondary" && "1px solid #10b981"};
   cursor: pointer;
+  align-items: center;
+  display: flex;
   padding: ${(props) =>
     props.$padding
       ? props.$padding
@@ -136,6 +146,12 @@ const Button = ({
   focusBorder,
   activeBorder,
   onClick,
+  src,
+  spacing,
+  iconPlacement = "left",
+  iconBorderRadius,
+  iconHeight,
+  iconWidth,
 }: ButtonProps) => {
   const fontSize = textFontSize
     ? textFontSize
@@ -169,14 +185,50 @@ const Button = ({
       disabled={disabled}
       onClick={onClick}
     >
-      <Text
-        color={definedTextColor}
-        fontWeight={textFontWeight}
-        fontSize={fontSize}
-        fontFamily={textFontFamily}
-      >
-        {text}
-      </Text>
+      {src && iconPlacement === "left" && (
+        <Icon
+          padding={
+            spacing
+              ? `0 ${spacing} 0 0`
+              : size === "large"
+                ? "0 20px 0 0"
+                : size === "medium"
+                  ? "0 12px 0 0"
+                  : "0 7px 0 0"
+          }
+          iconHeight={iconHeight}
+          iconWidth={iconWidth}
+          src={src}
+          iconBorderRadius={iconBorderRadius}
+        />
+      )}
+      <Div>
+        <Text
+          color={definedTextColor}
+          fontWeight={textFontWeight}
+          fontSize={fontSize}
+          fontFamily={textFontFamily}
+        >
+          {text}
+        </Text>
+      </Div>
+      {src && iconPlacement === "right" && (
+        <Icon
+          padding={
+            spacing
+              ? `0 0 0 ${spacing}`
+              : size === "large"
+                ? "0 0 0 20px"
+                : size === "medium"
+                  ? "0 0 0 12px"
+                  : "0 0 0 7px"
+          }
+          iconHeight={iconHeight}
+          iconWidth={iconWidth}
+          src={src}
+          iconBorderRadius={iconBorderRadius}
+        />
+      )}
     </StyledButton>
   );
 };

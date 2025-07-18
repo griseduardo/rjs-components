@@ -1,3 +1,15 @@
+## 0.14.0
+
+_Jul. 18, 2025_
+
+### Breaking Changes
+
+- remove IconButton component
+
+### General Changes
+
+- add possibility to use icon in Button base component
+
 ## 0.13.0
 
 _Jul. 04, 2025_

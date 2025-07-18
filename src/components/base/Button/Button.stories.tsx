@@ -193,3 +193,77 @@ export const TextColor: Story = {
     </StorybookContainer>
   ),
 };
+
+export const WithIcon: Story = {
+  args: {
+    src: "/example.jpg",
+    size: "small",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} size="medium" />
+      <Button {...args} size="large" />
+    </StorybookContainer>
+  ),
+};
+
+export const IconPlacement: Story = {
+  args: {
+    src: "/example.jpg",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} iconPlacement="left" />
+      <Button {...args} iconPlacement="right" />
+    </StorybookContainer>
+  ),
+};
+
+export const IconSpacing: Story = {
+  args: {
+    src: "/example.jpg",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} spacing="20px" />
+    </StorybookContainer>
+  ),
+};
+
+export const IconHeight: Story = {
+  args: {
+    src: "/example.jpg",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} iconHeight="20px" />
+    </StorybookContainer>
+  ),
+};
+
+export const IconWidth: Story = {
+  args: {
+    src: "/example.jpg",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} iconWidth="20px" />
+    </StorybookContainer>
+  ),
+};
+
+export const CustomIconFormat: Story = {
+  args: {
+    src: "/example.jpg",
+  },
+  render: (args) => (
+    <StorybookContainer>
+      <Button {...args} />
+      <Button {...args} iconBorderRadius="10px" />
+    </StorybookContainer>
+  ),
+};

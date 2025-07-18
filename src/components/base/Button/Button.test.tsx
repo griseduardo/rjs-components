@@ -187,4 +187,56 @@ describe("<Button />", () => {
       "#000",
     );
   });
+
+  it("should render component with image", () => {
+    render(<Button src="image" text="Button" />);
+
+    const buttonElement = screen.getByRole("button", { name: "Button" });
+    const imageElement = buttonElement.childNodes[0];
+
+    expect(imageElement).toHaveStyleRule("padding", "0 12px 0 0");
+    expect(imageElement).toHaveStyleRule("height", "30px");
+    expect(imageElement).toHaveStyleRule("width", "auto");
+  });
+
+  it("should render component with custom image width", () => {
+    render(<Button src="image" text="Button" iconWidth="20px" />);
+
+    const buttonElement = screen.getByRole("button", { name: "Button" });
+    const imageElement = buttonElement.childNodes[0];
+
+    expect(imageElement).toHaveStyleRule("width", "20px");
+    expect(imageElement).toHaveStyleRule("height", "auto");
+  });
+
+  it("should render component with custom image height", () => {
+    render(<Button src="image" text="Button" iconHeight="20px" />);
+
+    const buttonElement = screen.getByRole("button", { name: "Button" });
+    const imageElement = buttonElement.childNodes[0];
+
+    expect(imageElement).toHaveStyleRule("height", "20px");
+    expect(imageElement).toHaveStyleRule("width", "auto");
+  });
+
+  it("should render component with custom image height and width", () => {
+    render(
+      <Button src="image" text="Button" iconHeight="20px" iconWidth="20px" />,
+    );
+
+    const buttonElement = screen.getByRole("button", { name: "Button" });
+    const imageElement = buttonElement.childNodes[0];
+
+    expect(imageElement).toHaveStyleRule("height", "20px");
+    expect(imageElement).toHaveStyleRule("width", "20px");
+  });
+
+  it("should render component with custom border radius image", () => {
+    render(<Button src="image" text="Button" iconBorderRadius="20px" />);
+
+    expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
+      "border-radius",
+      "20px",
+    );
+  });
 });
