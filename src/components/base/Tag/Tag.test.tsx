@@ -148,4 +148,54 @@ describe("<Tag />", () => {
 
     expect(within(element).getByText("Tag")).toHaveStyleRule("color", "#000");
   });
+
+  it("should render component with image", () => {
+    render(<Tag src="image" text="Tag" />);
+
+    const tagElement = screen.getByTestId("tag");
+    const imageElement = tagElement.childNodes[0];
+
+    expect(imageElement).toHaveStyleRule("padding", "0 12px 0 0");
+    expect(imageElement).toHaveStyleRule("height", "30px");
+    expect(imageElement).toHaveStyleRule("width", "auto");
+  });
+
+  it("should render component with custom image width", () => {
+    render(<Tag src="image" text="Tag" iconWidth="20px" />);
+
+    const tagElement = screen.getByTestId("tag");
+    const imageElement = tagElement.childNodes[0];
+
+    expect(imageElement).toHaveStyleRule("width", "20px");
+    expect(imageElement).toHaveStyleRule("height", "auto");
+  });
+
+  it("should render component with custom image height", () => {
+    render(<Tag src="image" text="Tag" iconHeight="20px" />);
+
+    const tagElement = screen.getByTestId("tag");
+    const imageElement = tagElement.childNodes[0];
+
+    expect(imageElement).toHaveStyleRule("height", "20px");
+    expect(imageElement).toHaveStyleRule("width", "auto");
+  });
+
+  it("should render component with custom image height and width", () => {
+    render(<Tag src="image" text="Tag" iconHeight="20px" iconWidth="20px" />);
+
+    const tagElement = screen.getByTestId("tag");
+    const imageElement = tagElement.childNodes[0];
+
+    expect(imageElement).toHaveStyleRule("height", "20px");
+    expect(imageElement).toHaveStyleRule("width", "20px");
+  });
+
+  it("should render component with custom border radius image", () => {
+    render(<Tag src="image" text="Tag" iconBorderRadius="20px" />);
+
+    expect(screen.getByRole("img", { name: "" })).toHaveStyleRule(
+      "border-radius",
+      "20px",
+    );
+  });
 });

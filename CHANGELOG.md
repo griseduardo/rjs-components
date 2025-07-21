@@ -1,3 +1,15 @@
+## 0.15.0
+
+_Jul. 21, 2025_
+
+### Breaking Changes
+
+- remove IconTag component
+
+### General Changes
+
+- add possibility to use icon in Tag base component
+
 ## 0.14.0
 
 _Jul. 18, 2025_

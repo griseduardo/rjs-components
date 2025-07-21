@@ -1,10 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import Div from "../Div/Div";
+import Icon from "../Icon/Icon";
 import Text from "../Text/Text";
 import { CommonTagProps, StyledCommonTagProps } from "../Common.types";
 
 export interface TagProps extends CommonTagProps {
   border?: string;
+  src?: string;
+  iconBorderRadius?: string;
+  iconPlacement?: "right" | "left";
+  iconHeight?: string;
+  iconWidth?: string;
+  spacing?: string;
 }
 
 export interface StyledTagProps extends StyledCommonTagProps {
@@ -13,6 +21,8 @@ export interface StyledTagProps extends StyledCommonTagProps {
 
 export const StyledTag = styled.div<StyledTagProps>`
   border: none;
+  align-items: center;
+  display: flex;
   padding: ${(props) =>
     props.$padding
       ? props.$padding
@@ -57,6 +67,12 @@ const Tag = ({
   size = "medium",
   padding,
   border,
+  src,
+  spacing,
+  iconPlacement = "left",
+  iconBorderRadius,
+  iconHeight,
+  iconWidth,
 }: TagProps) => {
   const fontSize = textFontSize
     ? textFontSize
@@ -77,14 +93,50 @@ const Tag = ({
       $padding={padding}
       $border={border}
     >
-      <Text
-        color={textColor}
-        fontWeight={textFontWeight}
-        fontSize={fontSize}
-        fontFamily={textFontFamily}
-      >
-        {text}
-      </Text>
+      {src && iconPlacement === "left" && (
+        <Icon
+          padding={
+            spacing
+              ? `0 ${spacing} 0 0`
+              : size === "large"
+                ? "0 20px 0 0"
+                : size === "medium"
+                  ? "0 12px 0 0"
+                  : "0 7px 0 0"
+          }
+          iconHeight={iconHeight}
+          iconWidth={iconWidth}
+          src={src}
+          iconBorderRadius={iconBorderRadius}
+        />
+      )}
+      <Div>
+        <Text
+          color={textColor}
+          fontWeight={textFontWeight}
+          fontSize={fontSize}
+          fontFamily={textFontFamily}
+        >
+          {text}
+        </Text>
+      </Div>
+      {src && iconPlacement === "right" && (
+        <Icon
+          padding={
+            spacing
+              ? `0 0 0 ${spacing}`
+              : size === "large"
+                ? "0 0 0 20px"
+                : size === "medium"
+                  ? "0 0 0 12px"
+                  : "0 0 0 7px"
+          }
+          iconHeight={iconHeight}
+          iconWidth={iconWidth}
+          src={src}
+          iconBorderRadius={iconBorderRadius}
+        />
+      )}
     </StyledTag>
   );
 };
