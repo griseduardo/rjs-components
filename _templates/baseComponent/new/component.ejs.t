@@ -8,7 +8,11 @@ export interface <%=name%>Props {
 
 }
 
-export const Styled<%=name%> = styled.<<%=name%>Props>`
+export interface Styled<%=name%>Props {
+
+}
+
+export const Styled<%=name%> = styled.<%=html%><Styled<%=name%>Props>`
 `
 
 const <%=name%> = ({

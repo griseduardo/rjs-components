@@ -2,7 +2,6 @@ import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
 
 import Div from "../Div/Div";
-import Icon from "../Icon/Icon";
 import Text from "../Text/Text";
 import {
   CommonButtonTagProps,
@@ -16,17 +15,10 @@ export interface ButtonProps extends CommonButtonTagProps {
   activeColor?: string;
   disabled?: boolean;
   disabledOpacity?: number;
-  border?: string;
   hoverBorder?: string;
   focusBorder?: string;
   activeBorder?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
-  src?: string;
-  iconBorderRadius?: string;
-  iconPlacement?: "right" | "left";
-  iconHeight?: string;
-  iconWidth?: string;
-  spacing?: string;
 }
 
 export interface StyledButtonProps extends StyledCommonButtonTagProps {
@@ -35,7 +27,6 @@ export interface StyledButtonProps extends StyledCommonButtonTagProps {
   $focusColor?: string;
   $activeColor?: string;
   $disabledOpacity?: number;
-  $border?: string;
   $hoverBorder?: string;
   $focusBorder?: string;
   $activeBorder?: string;
@@ -146,12 +137,9 @@ const Button = ({
   focusBorder,
   activeBorder,
   onClick,
-  src,
   spacing,
+  icon,
   iconPlacement = "left",
-  iconBorderRadius,
-  iconHeight,
-  iconWidth,
 }: ButtonProps) => {
   const fontSize = textFontSize
     ? textFontSize
@@ -185,8 +173,8 @@ const Button = ({
       disabled={disabled}
       onClick={onClick}
     >
-      {src && iconPlacement === "left" && (
-        <Icon
+      {icon && iconPlacement === "left" && (
+        <Div
           padding={
             spacing
               ? `0 ${spacing} 0 0`
@@ -196,11 +184,10 @@ const Button = ({
                   ? "0 12px 0 0"
                   : "0 7px 0 0"
           }
-          iconHeight={iconHeight}
-          iconWidth={iconWidth}
-          src={src}
-          iconBorderRadius={iconBorderRadius}
-        />
+          alignItems="center"
+        >
+          {icon}
+        </Div>
       )}
       <Div>
         <Text
@@ -212,8 +199,8 @@ const Button = ({
           {text}
         </Text>
       </Div>
-      {src && iconPlacement === "right" && (
-        <Icon
+      {icon && iconPlacement === "right" && (
+        <Div
           padding={
             spacing
               ? `0 0 0 ${spacing}`
@@ -223,11 +210,10 @@ const Button = ({
                   ? "0 0 0 12px"
                   : "0 0 0 7px"
           }
-          iconHeight={iconHeight}
-          iconWidth={iconWidth}
-          src={src}
-          iconBorderRadius={iconBorderRadius}
-        />
+          alignItems="center"
+        >
+          {icon}
+        </Div>
       )}
     </StyledButton>
   );

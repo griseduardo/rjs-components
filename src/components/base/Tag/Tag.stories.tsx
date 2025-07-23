@@ -13,6 +13,28 @@ export default meta;
 
 type Story = StoryObj<typeof Tag>;
 
+const icon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="white"
+    width="15px"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"
+    />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M6 6h.008v.008H6V6Z"
+    />
+  </svg>
+);
+
 export const Default: Story = {
   args: {},
   render: (args) => (
@@ -142,7 +164,7 @@ export const TextColor: Story = {
 
 export const WithIcon: Story = {
   args: {
-    src: "/example.jpg",
+    icon: icon,
     size: "small",
   },
   render: (args) => (
@@ -156,7 +178,7 @@ export const WithIcon: Story = {
 
 export const IconPlacement: Story = {
   args: {
-    src: "/example.jpg",
+    icon: icon,
   },
   render: (args) => (
     <StorybookContainer>
@@ -168,48 +190,12 @@ export const IconPlacement: Story = {
 
 export const IconSpacing: Story = {
   args: {
-    src: "/example.jpg",
+    icon: icon,
   },
   render: (args) => (
     <StorybookContainer>
       <Tag {...args} />
       <Tag {...args} spacing="20px" />
-    </StorybookContainer>
-  ),
-};
-
-export const IconHeight: Story = {
-  args: {
-    src: "/example.jpg",
-  },
-  render: (args) => (
-    <StorybookContainer>
-      <Tag {...args} />
-      <Tag {...args} iconHeight="20px" />
-    </StorybookContainer>
-  ),
-};
-
-export const IconWidth: Story = {
-  args: {
-    src: "/example.jpg",
-  },
-  render: (args) => (
-    <StorybookContainer>
-      <Tag {...args} />
-      <Tag {...args} iconWidth="20px" />
-    </StorybookContainer>
-  ),
-};
-
-export const CustomIconFormat: Story = {
-  args: {
-    src: "/example.jpg",
-  },
-  render: (args) => (
-    <StorybookContainer>
-      <Tag {...args} />
-      <Tag {...args} iconBorderRadius="10px" />
     </StorybookContainer>
   ),
 };

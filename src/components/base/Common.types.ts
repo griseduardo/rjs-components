@@ -26,6 +26,10 @@ export interface CommonButtonTagProps {
   borderRadius?: string;
   size?: "small" | "medium" | "large";
   padding?: string;
+  border?: string;
+  icon?: React.ReactNode;
+  iconPlacement?: "right" | "left";
+  spacing?: string;
 }
 
 export interface StyledCommonButtonTagProps {
@@ -38,12 +42,5 @@ export interface StyledCommonButtonTagProps {
   $borderRadius?: string;
   $size?: "small" | "medium" | "large";
   $padding?: string;
-}
-
-export interface CommonTagProps extends CommonButtonTagProps {
-  type?: "default" | "success" | "alert" | "error";
-}
-
-export interface StyledCommonTagProps extends StyledCommonButtonTagProps {
-  $type?: "default" | "success" | "alert" | "error";
+  $border?: string;
 }

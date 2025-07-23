@@ -13,6 +13,24 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
+const icon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="white"
+    width="20"
+    height="20"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+    />
+  </svg>
+);
+
 export const Default: Story = {
   args: {},
   render: (args) => (
@@ -196,7 +214,7 @@ export const TextColor: Story = {
 
 export const WithIcon: Story = {
   args: {
-    src: "/example.jpg",
+    icon: icon,
     size: "small",
   },
   render: (args) => (
@@ -210,7 +228,7 @@ export const WithIcon: Story = {
 
 export const IconPlacement: Story = {
   args: {
-    src: "/example.jpg",
+    icon: icon,
   },
   render: (args) => (
     <StorybookContainer>
@@ -222,48 +240,12 @@ export const IconPlacement: Story = {
 
 export const IconSpacing: Story = {
   args: {
-    src: "/example.jpg",
+    icon: icon,
   },
   render: (args) => (
     <StorybookContainer>
       <Button {...args} />
       <Button {...args} spacing="20px" />
-    </StorybookContainer>
-  ),
-};
-
-export const IconHeight: Story = {
-  args: {
-    src: "/example.jpg",
-  },
-  render: (args) => (
-    <StorybookContainer>
-      <Button {...args} />
-      <Button {...args} iconHeight="20px" />
-    </StorybookContainer>
-  ),
-};
-
-export const IconWidth: Story = {
-  args: {
-    src: "/example.jpg",
-  },
-  render: (args) => (
-    <StorybookContainer>
-      <Button {...args} />
-      <Button {...args} iconWidth="20px" />
-    </StorybookContainer>
-  ),
-};
-
-export const CustomIconFormat: Story = {
-  args: {
-    src: "/example.jpg",
-  },
-  render: (args) => (
-    <StorybookContainer>
-      <Button {...args} />
-      <Button {...args} iconBorderRadius="10px" />
     </StorybookContainer>
   ),
 };

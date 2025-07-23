@@ -1,22 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import Div from "../Div/Div";
-import Icon from "../Icon/Icon";
 import Text from "../Text/Text";
-import { CommonTagProps, StyledCommonTagProps } from "../Common.types";
+import {
+  CommonButtonTagProps,
+  StyledCommonButtonTagProps,
+} from "../Common.types";
 
-export interface TagProps extends CommonTagProps {
-  border?: string;
-  src?: string;
-  iconBorderRadius?: string;
-  iconPlacement?: "right" | "left";
-  iconHeight?: string;
-  iconWidth?: string;
-  spacing?: string;
+export interface TagProps extends CommonButtonTagProps {
+  type?: "default" | "success" | "alert" | "error";
 }
 
-export interface StyledTagProps extends StyledCommonTagProps {
-  $border?: string;
+export interface StyledTagProps extends StyledCommonButtonTagProps {
+  $type?: "default" | "success" | "alert" | "error";
 }
 
 export const StyledTag = styled.div<StyledTagProps>`
@@ -67,12 +63,9 @@ const Tag = ({
   size = "medium",
   padding,
   border,
-  src,
   spacing,
+  icon,
   iconPlacement = "left",
-  iconBorderRadius,
-  iconHeight,
-  iconWidth,
 }: TagProps) => {
   const fontSize = textFontSize
     ? textFontSize
@@ -93,8 +86,8 @@ const Tag = ({
       $padding={padding}
       $border={border}
     >
-      {src && iconPlacement === "left" && (
-        <Icon
+      {icon && iconPlacement === "left" && (
+        <Div
           padding={
             spacing
               ? `0 ${spacing} 0 0`
@@ -104,11 +97,10 @@ const Tag = ({
                   ? "0 12px 0 0"
                   : "0 7px 0 0"
           }
-          iconHeight={iconHeight}
-          iconWidth={iconWidth}
-          src={src}
-          iconBorderRadius={iconBorderRadius}
-        />
+          alignItems="center"
+        >
+          {icon}
+        </Div>
       )}
       <Div>
         <Text
@@ -120,8 +112,8 @@ const Tag = ({
           {text}
         </Text>
       </Div>
-      {src && iconPlacement === "right" && (
-        <Icon
+      {icon && iconPlacement === "right" && (
+        <Div
           padding={
             spacing
               ? `0 0 0 ${spacing}`
@@ -131,11 +123,10 @@ const Tag = ({
                   ? "0 0 0 12px"
                   : "0 0 0 7px"
           }
-          iconHeight={iconHeight}
-          iconWidth={iconWidth}
-          src={src}
-          iconBorderRadius={iconBorderRadius}
-        />
+          alignItems="center"
+        >
+          {icon}
+        </Div>
       )}
     </StyledTag>
   );

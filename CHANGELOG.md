@@ -1,3 +1,18 @@
+## 0.16.0
+
+_Jul. 23, 2025_
+
+### Breaking Changes
+
+- remove src, iconBorderRadius, iconHeight and iconWidth props for Button and Tag base component
+- add icon props, allowing to use svg
+
+### General Changes
+
+- use extended CommonButtonTagProps type in the place of extended CommonTagProps in Tag base component
+- use extended StyledCommonButtonTagProps type in the place of extended StyledCommonTagProps in Tag base component
+- adjust hygen templates
+
 ## 0.15.0
 
 _Jul. 21, 2025_

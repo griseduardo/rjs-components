@@ -1,7 +1,7 @@
 ---
 to: src/components/base/<%=name%>/<%=name%>.mdx
 ---
-import { ArgTypes, Canvas, Meta, Story } from '@storybook/blocks';
+import { Canvas, Controls, Meta } from "@storybook/blocks";
 import * as Stories from './<%=name%>.stories';
 
 <Meta of={Stories} />
@@ -10,9 +10,9 @@ import * as Stories from './<%=name%>.stories';
 
 <%=name%> base component.
 
-## Props
+<Canvas of={Stories.Default} withToolbar />
 
-<ArgTypes />
+<Controls of={Stories.Default} />
 
 ## Predefined properties
 

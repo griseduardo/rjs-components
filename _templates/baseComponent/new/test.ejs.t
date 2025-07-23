@@ -9,4 +9,6 @@ import { render, screen } from "@testing-library/react";
 import <%=name%> from "./<%=name%>";
 
 describe("<<%=name%>/>", () => {
+  it("should render component with default properties", () => {
+  });
 });
