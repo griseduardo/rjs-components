@@ -18,7 +18,7 @@ npm install rjs-components
 
 ## Storybook
 
-The lib components are presented in [storybook](https://649f75c489527d98e48de36a-cwnogxlvqu.chromatic.com/).
+The lib components are presented in [storybook](https://649f75c489527d98e48de36a-didfcgvcnp.chromatic.com/).
 
 ## Import components
 

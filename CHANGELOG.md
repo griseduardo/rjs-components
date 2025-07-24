@@ -1,3 +1,17 @@
+## 0.16.1
+
+_Jul. 24, 2025_
+
+- update react and react-dom to 19.1.0
+- update styled-components to 6.1.19
+- update jest to 30.0.5 and dependencies versions
+- update @testing-library/react to 16.3.0 and dependencies versions
+- update typescript-eslint to 8.38.0 and dependencies versions
+- update typescript to 5.8.3 and dependencies versions
+- update rollup to 4.45.1 and dependencies versions
+- update @babel/core to 7.28.0 and dependencies versions
+- update chromatic to 13.1.2
+
 ## 0.16.0
 
 _Jul. 23, 2025_
