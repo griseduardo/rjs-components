@@ -1,3 +1,10 @@
+## 0.16.2
+
+_Jul. 24, 2025_
+
+- update node to 22.0.0
+- update lint-staged to 16.1.2
+
 ## 0.16.1
 
 _Jul. 24, 2025_

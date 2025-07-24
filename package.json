@@ -1,6 +1,6 @@
 {
   "name": "rjs-components",
-  "version": "0.16.1",
+  "version": "0.16.2",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -63,7 +63,7 @@
     "jest": "^30.0.5",
     "jest-environment-jsdom": "^30.0.5",
     "jest-styled-components": "^7.2.0",
-    "lint-staged": "^15.3.0",
+    "lint-staged": "^16.1.2",
     "prettier": "^3.4.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
