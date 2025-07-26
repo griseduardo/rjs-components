@@ -1,3 +1,14 @@
+## 0.16.3
+
+_Jul. 26, 2025_
+
+- update storybook to 9.0.18 and dependencies versions
+- add @storybook/addon-docs
+- remove @storybook/addon-essentials
+- remove @storybook/addon-interactions
+- remove @storybook/blocks
+- remove @storybook/react
+
 ## 0.16.2
 
 _Jul. 24, 2025_

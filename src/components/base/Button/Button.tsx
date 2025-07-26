@@ -1,8 +1,8 @@
 import React, { MouseEventHandler } from "react";
 import styled from "styled-components";
 
-import Div from "../Div/Div";
 import Text from "../Text/Text";
+import Div from "../Div/Div";
 import {
   CommonButtonTagProps,
   StyledCommonButtonTagProps,
